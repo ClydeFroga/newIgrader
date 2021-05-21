@@ -1,0 +1,34 @@
+.socialMedia {
+  max-width: calc(5 * 24px + 25px);
+  max-height: 80px;
+  display: flex;
+  align-content: center;
+
+  > a {
+    min-width: 24px;
+    padding: 2px;
+    cursor: pointer;
+    margin: auto;
+    height: max-content;
+    display: flex;
+    max-width: 24px;
+    max-height: 24px;
+    &:hover {
+      //background-color: $brown3;
+    }
+    &:not(:last-child) {
+      margin-right: 5px;
+    }
+  }
+  svg {
+    //color: $main-color;
+    //width: 100%;
+
+    &:hover {
+      //color: $brown3;
+    }
+    &:active {
+      //color: $active-color;
+    }
+  }
+}

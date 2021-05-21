@@ -1,0 +1,12 @@
+.commentsCount {
+	margin-top: 10px;
+	display: flex;
+	align-items: flex-start;
+	font-size: 12px;
+	line-height: 150%;
+	color: $dark;
+	&:before {
+		content: url(svg/assets/comment.svg);
+		margin-right: 5px;
+	}
+}

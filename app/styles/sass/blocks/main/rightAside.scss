@@ -1,0 +1,38 @@
+.rightAside {
+	margin-top: 35px;
+	max-width: 300px;
+	height: 100vh;
+	//position: sticky;
+	//top: 20px;
+	.socialMedia {
+		padding-top: 10px;
+	}
+	
+	&__darkBlock {
+		background-color: #EFEFEF;
+	}
+	
+	> div {
+		padding: 25px 30px;
+		&:not(:last-child) {
+			margin-bottom: 20px;
+		}
+	}
+}
+
+@media (max-width: 1919px) {
+	.rightAside {
+		.socialMedia {
+			display: none;
+		}
+	}
+}
+
+@media (max-width: 1279px) {
+	.rightAside {
+		display: none;
+		&__darkBlock {
+			padding: 35px 20px;
+		}
+	}
+}

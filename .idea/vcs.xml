@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$/../dpromGulp" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../leskGulp" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../../../../../xampp/htdocs/dprom/wp-content/themes/dprom3" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../../../../../xampp/htdocs/igrader/wp-content/themes/igrader" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../../../../../xampp/htdocs/lesk/wp-content/themes/forest" vcs="Git" />
+  </component>
+</project>

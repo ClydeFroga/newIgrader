@@ -1,0 +1,32 @@
+.userFields {
+	//padding-left: 55px;
+	svg {
+		max-width: 24px;
+		max-height: 24px;
+		padding: 2px;
+	}
+	&__user {
+		cursor: pointer;
+		display: inline-flex;
+		align-items: center;
+		span {
+			margin-left: 5px;
+			color: $dark;
+		}
+		margin-right: 15px;
+	}
+	&__notification {
+		cursor: pointer;
+		position: relative;
+		&.active:after {
+			content: '';
+			border: 4px solid #ff8b00;
+			border-radius: 50%;
+			display: inline-block;
+			position: absolute;
+			left: 54%;
+			top: -8px;
+			z-index: 2;
+		}
+	}
+}

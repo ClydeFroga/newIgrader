@@ -1,0 +1,142 @@
+.dateAndViews {
+  display: flex;
+  justify-content: space-between;
+  span , a {
+    //color: $grey3;
+    font-size: 12px;
+    line-height: 16px;
+    align-items: center;
+    letter-spacing: 0.4px;
+    &:not(:last-child) {
+      margin-right: 25px;
+    }
+  }
+
+  .eventsDate {
+    //padding: 12px 35px;
+    margin-top: 8px;
+    //color: $main-color;
+    background-color: white;
+    font-size: 10px;
+    line-height: 16px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+
+  .city {
+    display: block;
+    font-weight: bold;
+    font-size: 10px;
+    line-height: 16px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    //color: $main-color;
+    &:before {
+      content: '';
+      width: 19px;
+      height: 19px;
+      background: url("svg/assets/city.svg");
+      background-repeat: no-repeat;
+      position: relative;
+      left: 0;
+      top: 5px;
+      display: inline-flex;
+      margin-right: 2px;
+    }
+  }
+
+  .views {
+    display: inline-flex;
+    &:before {
+      content: '';
+      width: 12px;
+      height: 10px;
+      background: url("svg/assets/views.svg");
+      background-repeat: no-repeat !important;
+      position: relative;
+      left: 0;
+      top: 1px;
+      display: inline-flex;
+      margin-right: 5px;
+    }
+    &.dark {
+      &:before {
+        background: url("svg/assets/viewsDark.svg");
+      }
+      color: $dark;
+    }
+
+  }
+
+  .read {
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 150%;
+    &:after {
+      content: url("svg/assets/turnUpDark.svg");
+      width: 12px;
+      height: 12px;
+      transform: rotate(90deg);
+      position: relative;
+      left: 0;
+      top:4px;
+      display: inline-flex;
+      margin-left: 4px;
+    }
+  }
+  
+  .category {
+    cursor: pointer;
+    color: #f8f8f8;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    padding: 5px 10px;
+    border: 1px solid #f8f8f8;
+    border-radius: 10px 0;
+    a, span {
+      margin: 0;
+      //color: $brown3;
+    }
+    &.dark {
+      background-color: $color1;
+      border: none;
+    }
+    &.orange {
+      background-color: $accent;
+      border: none;
+    }
+  }
+  
+  .date {
+    &.dark {
+      color: $dark;
+    }
+  }
+}
+
+.dateAndViews.start {
+  justify-content: flex-start;
+}
+
+@media (max-width: 1023px) {
+  .dateAndViews {
+    gap: 10px;
+    span, a {
+      font-size: 12px !important;
+      margin: 0;
+    }
+    //.category {
+    //  align-self: end;
+    //}
+    //.eventsDate {
+    //  padding: 6px 17px;
+    //  font-size: 7px;
+    //  line-height: 16px;
+    //}
+    //.city {
+    //  font-size: 7px;
+    //  line-height: 16px;
+    //}
+  }
+}

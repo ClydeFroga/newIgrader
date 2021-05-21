@@ -1,0 +1,158 @@
+$paddingLeft: 17%;
+
+.asideMenu {
+	position: relative;
+	//margin-top: -3px;
+	padding-top: 49px;
+	max-width: 270px;
+	height: 100%;
+	background-color: $gray;
+	> div {
+		position: sticky;
+		top: 20px;
+		.userFields {
+			padding-left: $paddingLeft;
+		}
+		> ul {
+			padding: 0;
+			list-style-type: none;
+			a {
+				color: $dark;
+				font-size: 16px;
+				line-height: 150%;
+				padding: 6px 2%;
+				transition: all .2s;
+				border-radius: 10px 0;
+				display: inline-block;
+				text-transform: uppercase;
+			}
+			> li {
+				padding: 7px 0 7px $paddingLeft;
+
+				&:first-child {
+					border-top: 1px solid #EBEDEF;
+				}
+				&:last-child {
+					border-top: 1px solid #EBEDEF;
+					border-bottom: 1px solid #EBEDEF;
+				}
+				&:not(:last-child) {
+					border-top: 1px solid #EBEDEF;
+				}
+				&.dropdown {
+					display: block;
+				}
+				.sub-menu {
+					width: 100%;
+					padding-top: 7px;
+					position: relative;
+					margin-bottom: 10px;
+					li {
+						padding: 1px 0;
+						border: none;
+						a {
+							padding: 3px 0 3px  16px;
+							color: $dark;
+						}
+					}
+				}
+				&:hover {
+					> a {
+						color: white;
+						background-color: $dark;
+						transition: all .2s;
+					}
+				}
+			}
+			
+		}
+	}
+	&__close {
+		display: none;
+	}
+	
+	.current-menu-item {
+		a {
+			position: relative;
+			font-weight: bold;
+			&:before {
+				content: '';
+				border: 4px solid #ff8b00;
+				border-radius: 50%;
+				display: inline-block;
+				position: absolute;
+				right: 100%;
+				top: 40%;
+			}
+		}
+		
+	}
+}
+
+@media (max-width: 1919px) {
+	$paddingLeft: 7%;
+	.asideMenu {
+		> div {
+			.userFields {
+				padding-left: $paddingLeft;
+			}
+			> ul {
+				> li {
+					padding: 7px 0 7px $paddingLeft;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 1279px) {
+	$paddingLeft: 17%;
+	.asideMenu {
+		> div {
+			
+			.userFields {
+				padding-left: $paddingLeft;
+			}
+			> ul {
+				> li {
+					padding: 7px 0 7px $paddingLeft;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 1023px) {
+	.asideMenu {
+		margin-top: 3px;
+		> div {
+			top: 50px;
+		}
+		display: none;
+		position: absolute;
+		min-width: 270px;
+		z-index: 10;
+		left: -270px;
+		&.open {
+			display: block;
+			left: 0;
+		}
+		&__close {
+			position: absolute;
+			top: -39px;
+			right: 10px;
+			display: block;
+			svg {
+				color: $dark;
+				max-width: 40px;
+				max-height: 40px;
+				cursor: pointer;
+			}
+		}
+	}
+}
+@media (max-width: 767px) {
+	.asideMenu {
+		margin-top: -7px;
+	}
+}

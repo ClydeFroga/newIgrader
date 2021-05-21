@@ -1,0 +1,107 @@
+.buttonsBlock {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	
+	> *:not(:last-child) {
+		margin-right: 20px;
+	}
+	&.whiteBack {
+		background-color: white;
+	}
+}
+
+.transparentButton, .orangeButton {
+	cursor: pointer;
+}
+
+.orangeButton {
+	color: white;
+	background-color: $secondary;
+	font-size: 12px;
+	line-height: 150%;
+	padding: 10px 20px;
+}
+
+.transparentButton {
+	display: inline-flex;
+	svg {
+		color: #fafafa;
+	}
+	span {
+		padding: 0 10px;
+		font-size: 14px;
+		line-height: 150%;
+	}
+	&.dark {
+		color: $dark;
+		span {
+			color: $dark;
+		}
+		svg {
+			color: $dark;
+		}
+	}
+	&.close {
+		svg {
+			position: relative;
+			margin-right: 8px;
+			margin-top: 3px;
+			width: 18px;
+			height: 18px;
+		}
+	}
+	&.turnUp {
+		&.down {
+			svg {
+				transform: rotate(180deg);
+			}
+		}
+		svg {
+			position: relative;
+			margin-top: 5px;
+			margin-right: 8px;
+			width: 10px;
+			height: 14px;
+		}
+	}
+}
+
+.hiddenButton {
+	display: none;
+}
+
+@media (max-width: 1023px) {
+	.transparentButton {
+
+		&.close {
+			svg {
+				margin-right: 0;
+			}
+		}
+		&.turnUp {
+			svg {
+				margin-right: 0;
+			}
+		}
+	}
+}
+@media (max-width: 767px) {
+	.transparentButton {
+		span {
+			padding: 0 5px;
+			font-size: 12px;
+		}
+	}
+	.hiddenButton {
+		padding: 10px 25px;
+		border: 1px solid $dark;
+		color: $darker;
+		margin-top: 45px;
+		font-weight: bold;
+		font-size: 12px;
+		line-height: 150%;
+		cursor: pointer;
+		display: inline-block;
+	}
+}

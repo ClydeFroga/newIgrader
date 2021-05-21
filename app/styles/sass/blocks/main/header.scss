@@ -1,0 +1,140 @@
+.header {
+	margin-top: 35px;
+	margin-bottom: 35px;
+	&__menu {
+		//margin-top: 35px;
+		display: grid;
+		//grid-template-columns: 30px minmax(100px, 390px) max-content .15fr;
+		grid-template-columns: 30px minmax(100px, 390px) max-content .15fr;
+		justify-content: space-between;
+		align-items: center;
+		gap: 1%;
+		position: relative;
+		.delimiter {
+			display: none;
+		}
+		&Button {
+			width: 30px;
+			height: 25px;
+			cursor: pointer;
+			//margin-right: 50px;
+		}
+		&Logo {
+			max-width: 390px;
+			max-height: 44px;
+			//margin-right: 2%;
+			svg {
+				max-height: 44px;
+				width: 100%;
+			}
+		}
+		&Links {
+			display: flex;
+			align-items: flex-end;
+			padding: 0;
+			list-style: none;
+			flex-grow: 1;
+			justify-content: space-around;
+			margin: 0;
+			li {
+				padding: 10px 7px;
+			}
+			a {
+				font-size: 14px;
+				line-height: 150%;
+				text-transform: uppercase;
+			}
+		}
+		.search {
+			//margin: 0 2%;
+			input {
+				max-width: 100px;
+			}
+		}
+		.socialMedia {
+			display: none;
+			position: absolute;
+			left: 100%;
+		}
+	}
+}
+
+@media (max-width: 1919px) {
+	.header {
+		&__menu {
+			grid-template-columns: 30px minmax(100px, 390px) max-content .15fr calc(5 * 24px + 25px);
+			.socialMedia {
+				display: flex;
+				position: unset;
+			}
+		}
+	}
+}
+
+@media (max-width: 1520px) {
+	.header {
+		&__menu {
+			grid-template-columns: 0px minmax(100px, 390px) minmax(24px, .15fr) calc(5 * 24px + 25px);
+			.delimiter {
+				display: block;
+				grid-row-start: 2;
+				grid-column-start: 1;
+				grid-column-end: 5;
+				margin: 0 -40px;
+				height: 1px;
+				margin-top: 14px;
+				background-color: #FBFBFB;
+				width: 100%;
+			}
+
+			&Links {
+				grid-column-start: 1;
+				grid-column-end: 5;
+				grid-row-start: 3;
+				justify-content: flex-start;
+				margin-top: 15px;
+
+				li:not(:last-child) {
+					margin-right: 20px;
+				}
+			}
+			.search {
+				align-items: center;
+				input {
+					width: 0;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 1023px) {
+	.header {
+		&__menu {
+			&Button {
+				margin-left: -30px;
+			}
+			&Logo {
+				margin-left: -30px;
+			}
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.header {
+		&__menu {
+			grid-template-columns: 30px 1fr;
+			&Button {
+				margin-left: 0;
+			}
+			&Logo {
+				margin-left: 10px;
+			}
+			.search, .socialMedia, &Links, .delimiter {
+				display: none;
+			}
+
+		}
+	}
+}

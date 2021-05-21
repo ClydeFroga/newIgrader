@@ -1,0 +1,22 @@
+.search {
+	display: flex;
+	align-items: flex-start;
+	&:before {
+		content: url("svg/assets/search.svg");
+		//margin-right: 5px;
+		margin-top: 3px;
+	}
+	input {
+		font-size: 12px;
+		line-height: 150%;
+		border: none;
+	}
+	&.open {
+		input {
+			width: 100px !important;
+			z-index: 20;
+			position: relative;
+		}
+	}
+}
+
