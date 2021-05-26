@@ -21,6 +21,7 @@
 	font-size: 12px;
 	line-height: 150%;
 	padding: 10px 20px;
+	border: none;
 }
 
 .transparentButton {
@@ -71,6 +72,38 @@
 	display: none;
 }
 
+.fullWidthButton {
+	&.white {
+		color: #F8F8F8;
+		border-top:  1px solid #F8F8F8;
+	}
+	&.black {
+		color: #B0B0B0;
+		border-top:  1px solid #C4C4C4;
+	}
+	
+	cursor: pointer;
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 150%;
+	
+	display: flex;
+	justify-content: center;
+	margin-top: 30px;
+	padding-top: 20px;
+	
+}
+
+.buttonBlack {
+	cursor: pointer;
+	color: #F8F8F8;
+	background-color: $color1;
+	font-size: 12px;
+	line-height: 150%;
+	padding: 12px 25px;
+	max-width: max-content;
+}
+
 @media (max-width: 1023px) {
 	.transparentButton {
 
@@ -86,6 +119,7 @@
 		}
 	}
 }
+
 @media (max-width: 767px) {
 	.transparentButton {
 		span {
@@ -94,6 +128,7 @@
 		}
 	}
 	.hiddenButton {
+		max-width: max-content;
 		padding: 10px 25px;
 		border: 1px solid $dark;
 		color: $darker;

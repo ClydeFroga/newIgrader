@@ -1,0 +1,41 @@
+.modalSubscription {
+	opacity: 0;
+	display: none;
+	position: fixed;
+	z-index: 5;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	margin: auto;
+	background-color: rgba(39, 52, 63, 0.9);
+	.contactForm {
+		position: relative;
+		padding: 50px 50px;
+		margin: 10% auto;
+		width: 65%;
+	}
+	&__close {
+		cursor: pointer;
+		position: absolute;
+		top: -25px;
+		right: 5px;
+		max-width: 17px;
+		max-height: 17px;
+		svg {
+			max-height: 17px;
+			width: 100%;
+			height: 100%;
+		}
+	}
+}
+
+@media (max-width: 576px) {
+	.modalSubscription {
+		.contactForm {
+			padding: 25px 25px;
+			width: 90%;
+		}
+	}
+}

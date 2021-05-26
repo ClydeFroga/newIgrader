@@ -1,0 +1,112 @@
+.tickets {
+	margin-top: 40px;
+	
+	.largeTitle {
+		margin-bottom: 30px;
+	}
+	
+	> div {
+		display: flex;
+		justify-content: space-between;
+	}
+	
+	&__block {
+		display: flex;
+		flex-direction: column;
+		
+		.imgBlock {
+			padding-top: 75%;
+		}
+		&:not(:last-child) {
+			margin-right: 30px;
+		}
+		
+		&Bot {
+			background-color: #F8F8F8;
+			padding: 0 30px 30px 30px;
+			&BrandLine {
+				margin-bottom: 20px;
+				display: flex;
+
+				span {
+					margin-top: 10px;
+					color: #768B9C;
+					font-size: 12px;
+					line-height: 150%;
+				}
+
+			}
+			&Title {
+				display: block;
+				font-weight: bold;
+				font-size: 16px;
+				line-height: 150%;
+				margin-bottom: 15px;
+			}
+			&Text {
+				display: block;
+				font-weight: normal;
+				font-size: 12px;
+				line-height: 150%;
+				margin-bottom: 25px;
+			}
+			&Price {
+				display: block;
+				font-size: 25px;
+				line-height: 32px;
+				margin-bottom: 30px;
+			}
+		}
+	}
+}
+
+@media (max-width: 1279px) {
+	.tickets {
+		&__block:nth-child(n + 3) {
+			margin: 0 !important;
+		}
+		&__block:nth-child(n + 4) {
+			display: none;
+		}
+	}
+}
+
+@media (max-width: 1023px) {
+	.tickets {
+		&__block:nth-child(n + 2) {
+			margin: 0 !important;
+		}
+		&__block:nth-child(n + 3) {
+			display: none;
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.tickets {
+		> div {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 10px;
+		}
+		&__block {
+			&Bot {
+				padding: 0 15px 15px 15px;
+			}
+			margin: 0 !important;
+			&:nth-child(n + 3) {
+				display: block;
+			}
+			.buttonBlack, &BotText {
+				display: none;
+			}
+			&BotPrice {
+				margin: 0;
+				font-size: 16px;
+			}
+			&BotTitle {
+				font-size: 12px;
+			}
+		}
+	}
+}

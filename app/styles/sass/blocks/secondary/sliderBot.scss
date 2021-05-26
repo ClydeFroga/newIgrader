@@ -1,0 +1,23 @@
+.sliderBot {
+	margin-top: 40px;
+	.verticalBlock__botBlockTitle {
+		font-size: 16px;
+	}
+	.views, .category  {
+		display: none;
+	}
+	.imgBlock {
+		padding-top: 61.6%;
+	}
+	.largeTitle {
+		margin-bottom: 30px;
+	}
+}
+
+@media (max-width: 767px) {
+	.sliderBot {
+		.views, .category  {
+			display: block;
+		}
+	}
+}

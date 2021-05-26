@@ -188,86 +188,93 @@
 }
 
 @media (max-width: 575px) {
-	.backgroundBlock {
-		> div:first-child {
-			gap: 20px;
-			grid-template:
+	.container.top {
+		.backgroundBlock {
+			> div:first-child {
+				gap: 20px;
+				grid-template:
 			"one"
 			"two"
 			"three"
 			"foxy" 500px
 			"four"
 			/1fr
-		;
-		}
-		&__spec:nth-child(2) {
-			grid-area: two;
-			.backgroundBlock__blockText {
-				.dateAndViews {
-					flex-direction: column;
-					align-items: flex-start;
-				}
+			;
 			}
-		}
-		&__block {
-			background-size: 55%;
-			background-position: left;
-			min-height: 86px;
-			display: flex;
-			&:before {
-				//content: none;
-				z-index: -1;
-				background: rgba(118, 139, 156, 0.3);
-			}
-			&Text {
-				padding: 0 0 0 60%;
-				
-				> .dateAndViews {
-					display: none;
-				}
-				&Inner {
-					height: 100%;
-					> .dateAndViews {
-						display: flex;
-						padding: 13px 0;
+			&__spec:nth-child(2) {
+				grid-area: two;
+				.backgroundBlock__blockText {
+					.dateAndViews {
 						flex-direction: column;
-						height: 100%;
-						span {
-							color: $dark;
-						}
-						.views {
-							&:before {
-								background-image: url("svg/assets/viewsDark.svg");
-							}
-							margin-left: 0;
-						}
-					}
-					&Title {
-						display: none;
-					}
-					&Main {
-						display: none;
+						align-items: flex-start;
 					}
 				}
 			}
-		}
-		.foxyA {
-			a {
-				height: 500px !important;
-				min-height: 500px;
+			&__block {
+				background-size: 55%;
+				background-position: left;
+				min-height: 86px;
+				display: flex;
+				&:before {
+					//content: none;
+					z-index: -1;
+					background: rgba(118, 139, 156, 0.3);
+				}
+				&Text {
+					padding: 0 0 0 60%;
+					
+					> .dateAndViews {
+						display: none;
+					}
+					&Inner {
+						height: 100%;
+						> .dateAndViews {
+							display: flex;
+							padding: 13px 0;
+							flex-direction: column;
+							height: 100%;
+							span {
+								color: $dark;
+							}
+							.views {
+								&:before {
+									background-image: url("svg/assets/viewsDark.svg");
+								}
+								margin-left: 0;
+							}
+						}
+						&Title {
+							display: none;
+						}
+						&Main {
+							display: none;
+						}
+					}
+				}
+			}
+			.foxyA {
+				a {
+					height: 500px !important;
+					min-height: 500px;
+				}
+			}
+			&__spec {
+				display: flex;
+				flex-direction: column;
+			}
+			&__specHiddenTitle {
+				font-weight: bold;
+				font-size: 16px;
+				line-height: 150%;
+				color: $color1;
+				display: block;
+				margin-top: 12px;
 			}
 		}
-		&__spec {
-			display: flex;
-			flex-direction: column;
-		}
-		&__specHiddenTitle {
-			font-weight: bold;
+	}
+	.backgroundBlock {
+		&__blockTextInnerTitle {
 			font-size: 16px;
-			line-height: 150%;
-			color: $color1;
-			display: block;
-			margin-top: 12px;
 		}
 	}
 }

@@ -30,7 +30,7 @@
 }
 @media (max-width: 1023px) {
 	.secondaryText {
-		grid-template-columns: minmax(150px, 300px) 1fr;
+		grid-template-columns: 30% 1fr;
 		.foxy {
 			align-self: flex-start;
 			grid-row-start: 1;

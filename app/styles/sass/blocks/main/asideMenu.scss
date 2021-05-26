@@ -12,8 +12,16 @@ $paddingLeft: 17%;
 		top: 20px;
 		.userFields {
 			padding-left: $paddingLeft;
+			.search {
+				display: none;
+			}
+			.socialMedia {
+				display: none;
+			}
 		}
 		> ul {
+			overflow-y: auto;
+			//max-height: 70vh;
 			padding: 0;
 			list-style-type: none;
 			a {
@@ -126,8 +134,28 @@ $paddingLeft: 17%;
 	.asideMenu {
 		margin-top: 3px;
 		> div {
+			display: flex;
+			flex-direction: column;
 			top: 50px;
+			> ul {
+				max-height: 70vh;
+			}
+			.userFields {
+				order: 3;
+				.search {
+					display: flex;
+					align-items: center;
+					margin: 15px 0;
+					input {
+						background-color: #f8f8f8;
+					}
+				}
+				.socialMedia {
+					display: flex;
+				}
+			}
 		}
+
 		display: none;
 		position: absolute;
 		min-width: 270px;

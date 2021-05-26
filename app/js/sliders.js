@@ -93,5 +93,39 @@ function slider() {
             nextEl: '#sliderSec2__toRight',
         },
     });
+    let sliderBot = new Swiper('#sliderBot', {
+        spaceBetween: 30,
+        slidesPerColumnFill: 'row',
+        slidesPerView: 1.3,
+        
+        breakpoints: {
+            576: {
+                slidesPerView: 3,
+            },
+            1024: {
+                slidesPerColumn: 1,
+                slidesPerView: 4,
+            },
+        },
+        scrollbar: {
+            el: '#sliderBot__scrollBar',
+            draggable: true,
+            hide: false,
+        },
+    });
+    let sliderLarge = new Swiper('#sliderLarge', {
+        spaceBetween: 0,
+        slidesPerColumnFill: 'row',
+        slidesPerView: 1,
+        effect: 'fade',
+        loop: true,
+        fadeEffect: {
+            crossFade: true
+        },
+        navigation: {
+            prevEl: '.sliderLarge__left',
+            nextEl: '.sliderLarge__right',
+        },
+    });
 }
 document.addEventListener('DOMContentLoaded', slider)

@@ -6,7 +6,6 @@
     font-size: 12px;
     line-height: 16px;
     align-items: center;
-    letter-spacing: 0.4px;
     &:not(:last-child) {
       margin-right: 25px;
     }
@@ -25,23 +24,20 @@
 
   .city {
     display: block;
-    font-weight: bold;
-    font-size: 10px;
-    line-height: 16px;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    //color: $main-color;
+    font-size: 12px;
+    line-height: 150%;
+
     &:before {
       content: '';
-      width: 19px;
-      height: 19px;
+      width: 18px;
+      height: 21px;
       background: url("svg/assets/city.svg");
       background-repeat: no-repeat;
       position: relative;
       left: 0;
-      top: 5px;
+      top: 6px;
       display: inline-flex;
-      margin-right: 2px;
+      margin-right: 10px;
     }
   }
 
@@ -109,6 +105,9 @@
   }
   
   .date {
+    font-size: 12px;
+    line-height: 150%;
+    color: $dark;
     &.dark {
       color: $dark;
     }

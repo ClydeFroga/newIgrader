@@ -10,7 +10,7 @@
 	}
 
 	&__content {
-		grid-area: content;
+		
 		display: grid;
 		grid-template-columns: minmax(885px, 1fr) minmax(200px, 300px);
 		> * {
@@ -40,6 +40,12 @@
 		}
 	}
 	
+	&__block {
+		grid-area: content;
+		& > div:last-child {
+			margin-bottom: 70px;
+		}
+	}
 	
 }
 
@@ -58,5 +64,13 @@
 		'content'
 	/1fr
 	;
+	}
+}
+
+@media (max-width: 767px) {
+	.wrapper {
+		.hide767 {
+			display: none;
+		}
 	}
 }

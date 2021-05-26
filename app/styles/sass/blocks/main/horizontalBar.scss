@@ -1,0 +1,28 @@
+.horizontalBar {
+	&__blc {
+		display: flex;
+		&:not(:last-child) {
+			padding-bottom: 25px;
+			margin-bottom: 25px;
+		}
+		&Left {
+			
+			margin-right: 25px;
+		}
+		&Right {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			&Title {
+				display: block;
+				font-size: 18px;
+				line-height: 28px;
+				font-weight: 600;
+				color: $color1;
+			}
+			&Text {
+			
+			}
+		}
+	}
+}

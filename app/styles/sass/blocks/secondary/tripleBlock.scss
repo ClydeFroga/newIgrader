@@ -1,0 +1,130 @@
+.tripleBlock {
+	margin-top: 40px;
+	display: grid;
+	grid-template-columns: 1fr 1px 1fr 250px;
+	gap: 25px;
+	
+	.largeTitle {
+		margin-bottom: 30px;
+	}
+	
+	&__separator {
+		background-color: #C4C4C4;
+		height: 100%;
+	}
+	&__second {
+		display: flex;
+		flex-direction: column;
+		.horizontalBar {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			height: 100%;
+			&__blc {
+				&:not(:last-child) {
+					padding-bottom: unset;
+					margin-bottom: unset;
+				}
+				&Left {
+					flex: 0 0 31%;
+					padding-top: 20%;
+					//margin-right: 25px;
+				}
+				&Right {
+					&Title {
+						font-size: 16px;
+						line-height: 150%;
+					}
+					&Text {
+					
+					}
+				}
+			}
+		}
+	}
+	&__third {
+		margin-top: 62px;
+	}
+}
+
+@media (max-width: 1520px) {
+	.tripleBlock {
+		grid-template-columns: 1fr 1px 1fr;
+		&__third {
+			grid-column-start: 1;
+			grid-column-end: 4;
+			margin-top: 40px;
+			display: flex;
+			justify-content: space-between;
+
+		}
+	}
+}
+
+@media (max-width: 1023px) {
+	.tripleBlock {
+		grid-template-columns: 1fr;
+		
+		&__second {
+			.horizontalBar {
+				flex-direction: row;
+				flex-wrap: wrap;
+				&__blc {
+					flex: 0 0 45%;
+					&RightTitle {
+						margin-bottom: 25px;
+						font-weight: normal;
+					}
+					&:not(:last-child) {
+						margin-bottom: 30px;
+					}
+					&:nth-child(n + 5) {
+						display: none;
+					}
+				}
+			}
+		}
+		
+		&__separator {
+			display: none;
+		}
+		
+		&__third {
+			grid-column-end: unset;
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.tripleBlock {
+		&__second {
+			.horizontalBar {
+				flex-direction: column;
+				flex-wrap: nowrap;
+				&__blc {
+					flex: unset;
+					flex-wrap: wrap;
+					&RightTitle {
+						margin-bottom: 25px;
+					}
+					&:nth-child(n + 4) {
+						display: none;
+					}
+					&Left {
+						flex: 0 0 50%;
+						padding-top: 37%;
+					}
+					&Right {
+						margin-top: 20px;
+						flex: 0 0 100%;
+					}
+				}
+			}
+
+		}
+		
+		&__third {
+		
+		}
+	}
+}
