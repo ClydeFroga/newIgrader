@@ -2,6 +2,9 @@
 	margin-top: 40px;
 	display: grid;
 	grid-template-columns: 1fr 1px 1fr 250px;
+	&.withFoxyB {
+		grid-template-columns: 1fr 1px 1fr 300px;
+	}
 	gap: 25px;
 	
 	.largeTitle {
@@ -27,7 +30,7 @@
 				}
 				&Left {
 					flex: 0 0 31%;
-					padding-top: 20%;
+					padding-top: 23%;
 					//margin-right: 25px;
 				}
 				&Right {
@@ -44,12 +47,20 @@
 	}
 	&__third {
 		margin-top: 62px;
+		> .foxy {
+			margin-bottom: 20px;
+		}
 	}
 }
 
 @media (max-width: 1520px) {
 	.tripleBlock {
 		grid-template-columns: 1fr 1px 1fr;
+		
+		&.withFoxyB {
+			grid-template-columns: 1fr 1px 1fr;
+		}
+		
 		&__third {
 			grid-column-start: 1;
 			grid-column-end: 4;
@@ -92,12 +103,50 @@
 		&__third {
 			grid-column-end: unset;
 		}
+		
+		&.withFoxyB {
+			grid-template-columns: 1fr 200px;
+			.tripleBlock__first {
+				grid-column-start: 1;
+				grid-column-end: 3;
+			}
+			.tripleBlock__second {
+				flex-direction: column;
+				grid-row-start: 2;
+				grid-row-end: 3;
+				grid-column-start: 1;
+				grid-column-end: 2;
+				.horizontalBar {
+					flex-direction: column;
+					flex-wrap: nowrap;
+					&__blc {
+						flex: unset;
+						&RightTitle {
+							font-weight: 700;
+							font-size: 18px;
+						}
+						//padding-top: 0;
+					}
+				}
+			}
+			.tripleBlock__third {
+				flex-direction: column;
+				grid-row-start: 2;
+				grid-row-end: 3;
+				grid-column-start: 2;
+				grid-column-end: 3;
+				justify-content: flex-start;
+			}
+		}
 	}
 }
 
 @media (max-width: 767px) {
 	.tripleBlock {
 		&__second {
+			.largeTitle {
+				margin-bottom: 30px;
+			}
 			.horizontalBar {
 				flex-direction: column;
 				flex-wrap: nowrap;

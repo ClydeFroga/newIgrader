@@ -104,6 +104,19 @@
 	}
 }
 
+.backgroundBlockMiddle {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(3, minmax(150px, 250px));
+	gap: 5px;
+	.backgroundBlock__spec {
+		grid-area: unset !important;
+		.backgroundBlock__blockText {
+			justify-content: flex-end;
+		}
+	}
+}
+
 @media (max-width: 1919px) {
 	.backgroundBlock {
 		>div:first-child {

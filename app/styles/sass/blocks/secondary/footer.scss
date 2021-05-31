@@ -162,6 +162,9 @@
 			padding-left: 20px;
 		}
 		&__two {
+			.buttonBlack {
+				align-self: center;
+			}
 			> div {
 				> span:first-of-type {
 					flex:  0 0 60%;

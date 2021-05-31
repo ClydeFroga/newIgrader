@@ -1,0 +1,22 @@
+.breadcrumbs {
+	margin-bottom: 20px;
+	a, span {
+		color: $dark;
+		font-size: 14px;
+		line-height: 150%;
+		letter-spacing: 0.4px;
+
+	}
+	> a, span:last-of-type {
+		span {
+			font-size: 16px;
+			color: $color1;
+		}
+	}
+	svg {
+		max-width: 7px;
+		max-height: 7px;
+		transform: rotate(90deg);
+		margin: 0 5px;
+	}
+}

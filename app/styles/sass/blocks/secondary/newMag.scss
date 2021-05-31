@@ -21,7 +21,8 @@
 		margin-right: 10%;
 		align-items: center;
 	}
-	a {
+	a, span {
+		cursor: pointer;
 		display: inline-flex;
 		color: #f8f8f8;
 	}
@@ -43,7 +44,7 @@
 			flex-wrap: wrap;
 			margin-right: 0;
 		}
-		a {
+		a, span {
 			margin-top: 20px;
 		}
 		img {

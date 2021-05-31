@@ -1,0 +1,33 @@
+.doubleFoxyB {
+	display: flex;
+	margin-top: 50px;
+	&__foxyBlock {
+		padding-top: 102px;
+		margin-left: 25px;
+		flex: 0 0 300px;
+	}
+}
+
+@media (max-width: 1279px) {
+	.doubleFoxyB {
+		&__foxyBlock {
+			max-width: 30%;
+			flex: 0 0 30%;
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.doubleFoxyB {
+		margin-top: 20px;
+		flex-direction: column;
+		&__foxyBlock {
+			margin-top: 50px;
+			padding-top: 0;
+			margin-left: 0;
+			max-width: unset;
+			flex: 0 0 100%;
+		}
+	}
+}
+

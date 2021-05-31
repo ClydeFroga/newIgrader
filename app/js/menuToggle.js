@@ -6,6 +6,7 @@ let containerWidthAfter = null
 let asideMenuWidth = asideMenu.clientWidth
 
 function menuToggle() {
+
   width = document.documentElement.clientWidth;
   if(width > 1023) {
     asideMenuWidth = asideMenu.clientWidth

@@ -21,7 +21,7 @@ function slider() {
         },
         scrollbar: {
             el: '#sliderTop__scrollBar',
-            draggable: true,
+            draggable: false,
             hide: false,
         },
         pagination: {
@@ -31,6 +31,30 @@ function slider() {
         navigation: {
             prevEl: '#sliderTop__toLeft',
             nextEl: '#sliderTop__toRight',
+        },
+    });
+    let sliderSingleTop = new Swiper('#sliderSingleTop', {
+        spaceBetween: 18,
+        slidesPerColumnFill: 'row',
+        slidesPerView: 1.3,
+        allowTouchMove: true,
+        slidesPerColumn: 1,
+        
+        breakpoints: {
+
+            768: {
+                slidesPerColumn: 2,
+                slidesPerView: 3,
+            },
+            1024: {
+                slidesPerColumn: 3,
+                slidesPerView: 2,
+            },
+        },
+        scrollbar: {
+            el: '#sliderSingleTop__scrollBar',
+            draggable: false,
+            hide: false,
         },
     });
     let sliderSec1 = new Swiper('#sliderSec1', {
@@ -109,13 +133,14 @@ function slider() {
         },
         scrollbar: {
             el: '#sliderBot__scrollBar',
-            draggable: true,
+            draggable: false,
             hide: false,
         },
     });
     let sliderLarge = new Swiper('#sliderLarge', {
         spaceBetween: 0,
         slidesPerColumnFill: 'row',
+        allowTouchMove: false,
         slidesPerView: 1,
         effect: 'fade',
         loop: true,
@@ -125,6 +150,23 @@ function slider() {
         navigation: {
             prevEl: '.sliderLarge__left',
             nextEl: '.sliderLarge__right',
+        },
+    });
+    let sliderDouble = new Swiper('#sliderDouble', {
+        spaceBetween: 30,
+        slidesPerColumnFill: 'row',
+        allowTouchMove: true,
+        slidesPerColumn: 2,
+        slidesPerView: 3,
+
+
+        pagination: {
+            el: "#sliderDouble__pagination",
+            clickable: true
+        },
+        navigation: {
+            prevEl: '#sliderDouble__toLeft',
+            nextEl: '#sliderDouble__toRight',
         },
     });
 }

@@ -7,6 +7,8 @@
 	}
 	> div:first-child {
 		min-width: 0;
+	}
+	> div:first-child:not(:last-child) {
 		margin-right: 25px;
 	}
 	
@@ -25,6 +27,7 @@
 			//display: grid;
 			padding: 30px;
 			align-items: flex-start;
+			flex-grow: 1;
 			&Title {
 				font-size: 25px;
 				line-height: 32px;
@@ -34,7 +37,8 @@
 			}
 		}
 		&Image {
-			flex: 0 0 47%;
+			//flex: 0 0 47%;
+			flex: 0 0 400px;
 			.imgBlock {
 				margin-bottom: 0;
 			}
@@ -55,7 +59,8 @@
 		}
 	}
 	&__left {
-		left: 53%;
+		//left: 53%;
+		right: 354px;
 	}
 	&__right {
 		right: 0;
@@ -67,13 +72,35 @@
 	
 }
 
-@media (max-width: 1520px) {
+@media (max-width: 1820px) {
+	.sliderLarge {
+		&__block {
+			&Text {
+				&Title {
+					font-size: 20px;
+					line-height: 150%;
+				}
+				&Excerpt {
+					font-size: 16px;
+					line-height: 150%;
+				}
+			}
+		}
+	}
+}
+
+
+@media (max-width: 1600px) {
 	.sliderLarge {
 		&__block {
 			max-height: unset;
 			flex-direction: column;
 			&Text {
 				order: 2;
+				&Title {
+					font-size: 25px;
+					line-height: 150%;
+				}
 			}
 			.dateAndViews {
 				margin: 30px 0;
@@ -82,6 +109,7 @@
 		&__left {
 			top: 30%;
 			left: 0;
+			right: unset;
 		}
 		&__right {
 			top: 30%;
@@ -97,7 +125,7 @@
 		>div:first-child {
 			order: 2;
 			margin-top: 50px;
-			margin-right: 0;
+			margin-right: 0 !important;
 		}
 		&__block {
 		

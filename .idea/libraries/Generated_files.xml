@@ -30,6 +30,7 @@
         <item url="file://$PROJECT_DIR$/app/js/menuToggle.min.js" />
         <item url="file://$PROJECT_DIR$/app/js/ridgepole.min.js" />
         <item url="file://$PROJECT_DIR$/app/js/sliders.min.js" />
+        <item url="file://$PROJECT_DIR$/app/js/sticky.min.js" />
         <item url="file://$PROJECT_DIR$/app/js/svg4everybody.min.js" />
         <item url="file://$PROJECT_DIR$/app/js/swiper.min.min.js" />
         <item url="file://$PROJECT_DIR$/app/js/textFit.min.js" />
@@ -109,6 +110,7 @@
       <root url="file://$PROJECT_DIR$/app/js/menuToggle.min.js" />
       <root url="file://$PROJECT_DIR$/app/js/ridgepole.min.js" />
       <root url="file://$PROJECT_DIR$/app/js/sliders.min.js" />
+      <root url="file://$PROJECT_DIR$/app/js/sticky.min.js" />
       <root url="file://$PROJECT_DIR$/app/js/svg4everybody.min.js" />
       <root url="file://$PROJECT_DIR$/app/js/swiper.min.min.js" />
       <root url="file://$PROJECT_DIR$/app/js/textFit.min.js" />

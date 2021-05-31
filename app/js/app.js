@@ -141,17 +141,29 @@ document.addEventListener('DOMContentLoaded', () => {
   })
   
   function modalWindow() {
-    gsap.to('.modalSubscription', {opacity: 1, display: 'block'})
-    document.querySelector('#closeModal').addEventListener('click', () => {
-      gsap.to('.modalSubscription', {opacity: 0, display: 'none'})
+    gsap.to('#modalContactForm', {opacity: 1, display: 'block'})
+    document.querySelector('#modalContactForm #closeModal').addEventListener('click', () => {
+      gsap.to('#modalContactForm', {opacity: 0, display: 'none'})
+    })
+  }
+  function modalWindowSendpulse() {
+    gsap.to('#modalSendpulse', {opacity: 1, display: 'block'})
+    document.querySelector('#modalSendpulse #closeModal').addEventListener('click', () => {
+      gsap.to('#modalSendpulse', {opacity: 0, display: 'none'})
     })
   }
   
   let modalButtons = document.querySelectorAll('#openModal')
+  let openModalSendpulse = document.querySelectorAll('#openModalSendpulse')
   
   if(modalButtons) {
     for (let item of modalButtons) {
       item.addEventListener('click', modalWindow)
+    }
+  }
+  if(openModalSendpulse) {
+    for (let item of openModalSendpulse) {
+      item.addEventListener('click', modalWindowSendpulse)
     }
   }
 })

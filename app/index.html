@@ -5,48 +5,10 @@
     <!--#include virtual="/parts/leftAside.html" -->
 
     <div class="wrapper__block">
-        <div class="modalSubscription ">
-            <section class="container contactForm white">
-                <div class="contactForm__left">
-                    <span>
-                        Оформить подписку <br>
-                        на журнал Грейдер
-                    </span>
-                    <span>
-                        Получайте подборку статей каждый месяц
-                    </span>
-                </div>
-                <div class="contactForm__right">
-                    <div role="form" class="wpcf7" id="wpcf7-f42198-o2" dir="ltr" lang="ru-RU">
-                        <div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p> <ul></ul></div>
-                        <form action="" method="post" class="wpcf7-form init" novalidate="novalidate" data-status="init">
-                            <div style="display: none;">
-                                <input type="hidden" name="_wpcf7" value="42198">
-                                <input type="hidden" name="_wpcf7_version" value="5.4">
-                                <input type="hidden" name="_wpcf7_locale" value="ru_RU">
-                                <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f42198-o2">
-                                <input type="hidden" name="_wpcf7_container_post" value="0">
-                                <input type="hidden" name="_wpcf7_posted_data_hash" value="">
-                            </div>
-                            <p><span class="wpcf7-form-control-wrap your-email"><input type="email" name="your-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="Email"></span> </p>
-                            <p><span class="wpcf7-form-control-wrap your-name"><input type="text" name="your-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Фамилия, Имя"></span> </p>
-                            <p><span class="wpcf7-form-control-wrap acceptance-new"><span class="wpcf7-form-control wpcf7-acceptance"><span class="wpcf7-list-item"><label><input type="checkbox" name="acceptance-new" value="1" aria-invalid="false"><span class="wpcf7-list-item-label">Я соглашаюсь с условиями обработки персональных данных</span></label></span></span></span></p>
-                            <p><input type="submit" value="Подписаться" class="wpcf7-form-control wpcf7-submit orangeButton"><span class="ajax-loader"></span></p>
-                            <div class="wpcf7-response-output" aria-hidden="true"></div></form></div>
-                </div>
-                <div id="closeModal" class="modalSubscription__close">
-                    <svg>
-                        <use href="css/svg/out/symbol/svg/sprite.symbol.svg#closeFrame"></use>
-                    </svg>
-                </div>
-            </section>
-        </div>
 
         <div class="wrapper__content">
             <div class="container top">
                 <!--#include virtual="/parts/headerMenu.html" -->
-
-                <script src="js/menuToggle.js"></script>
 
                 <section class="backgroundBlock">
                     <div>
@@ -821,6 +783,7 @@
                         </div>
                         <div>
                             <!--#include virtual="/parts/foxyB3.html" -->
+                            <!--#include virtual="/parts/sendpulseSmall.html" -->
                         </div>
                     </div>
 
@@ -920,7 +883,7 @@
                 <img loading="lazy" src="https://dprom.online/wp-content/uploads/2021/04/2.jpg">
                 <div>
                     <a href="#" class="orangeButton readOnline">Читать on-line</a>
-                    <a href="#" class="subscribe">Подписаться</a>
+                    <span id="openModal"  class="subscribe">Подписаться</span>
                     <a href="#" >Архив журнала</a>
                 </div>
 
@@ -1417,22 +1380,22 @@
                             </div>
                             <div class="tickets__blockBot">
                                 <div class="tickets__blockBotBrandLine">
-                                    <span>
-                                        Обьявления
-                                    </span>
+                                <span>
+                                    Обьявления
+                                </span>
                                 </div>
                                 <span class="tickets__blockBotTitle">
-                                    Автокран КС-85713
-                                    грузоподъёмностью 100 тонн на шасси Volvo FM13 (10×4)
-                                </span>
+                                Автокран КС-85713
+                                грузоподъёмностью 100 тонн на шасси Volvo FM13 (10×4)
+                            </span>
                                 <span class="tickets__blockBotText">
 технически продуманное и более доступное по сравнению с импортными аналогами решение для строительства промышленных и инфраструктурных объектов                                </span>
                                 <span class="tickets__blockBotPrice">
-                                    345 050 ₽
-                                </span>
+                                345 050 ₽
+                            </span>
                                 <span class="buttonBlack">
-                                    Узнать больше
-                                </span>
+                                Узнать больше
+                            </span>
                             </div>
                         </a>
                         <a href="#" class="tickets__block">
@@ -1441,22 +1404,22 @@
                             </div>
                             <div class="tickets__blockBot">
                                 <div class="tickets__blockBotBrandLine">
-                                    <span>
-                                        Обьявления
-                                    </span>
+                                <span>
+                                    Обьявления
+                                </span>
                                 </div>
                                 <span class="tickets__blockBotTitle">
-                                    Автокран КС-85713
-                                    грузоподъёмностью 100 тонн на шасси Volvo FM13 (10×4)
-                                </span>
+                                Автокран КС-85713
+                                грузоподъёмностью 100 тонн на шасси Volvo FM13 (10×4)
+                            </span>
                                 <span class="tickets__blockBotText">
 технически продуманное и более доступное по сравнению с импортными аналогами решение для строительства промышленных и инфраструктурных объектов                                </span>
                                 <span class="tickets__blockBotPrice">
-                                    345 050 ₽
-                                </span>
+                                345 050 ₽
+                            </span>
                                 <span class="buttonBlack">
-                                    Узнать больше
-                                </span>
+                                Узнать больше
+                            </span>
                             </div>
                         </a>
                         <a href="#" class="tickets__block">
@@ -1465,22 +1428,22 @@
                             </div>
                             <div class="tickets__blockBot">
                                 <div class="tickets__blockBotBrandLine">
-                                    <span>
-                                        Обьявления
-                                    </span>
+                                <span>
+                                    Обьявления
+                                </span>
                                 </div>
                                 <span class="tickets__blockBotTitle">
-                                    Автокран КС-85713
-                                    грузоподъёмностью 100 тонн на шасси Volvo FM13 (10×4)
-                                </span>
+                                Автокран КС-85713
+                                грузоподъёмностью 100 тонн на шасси Volvo FM13 (10×4)
+                            </span>
                                 <span class="tickets__blockBotText">
 технически продуманное и более доступное по сравнению с импортными аналогами решение для строительства промышленных и инфраструктурных объектов                                </span>
                                 <span class="tickets__blockBotPrice">
-                                    345 050 ₽
-                                </span>
+                                345 050 ₽
+                            </span>
                                 <span class="buttonBlack">
-                                    Узнать больше
-                                </span>
+                                Узнать больше
+                            </span>
                             </div>
                         </a>
                         <a href="#" class="tickets__block">
@@ -1489,58 +1452,34 @@
                             </div>
                             <div class="tickets__blockBot">
                                 <div class="tickets__blockBotBrandLine">
-                                    <span>
-                                        Обьявления
-                                    </span>
+                                <span>
+                                    Обьявления
+                                </span>
                                 </div>
                                 <span class="tickets__blockBotTitle">
-                                    Автокран КС-85713
-                                    грузоподъёмностью 100 тонн на шасси Volvo FM13 (10×4)
-                                </span>
+                                Автокран КС-85713
+                                грузоподъёмностью 100 тонн на шасси Volvo FM13 (10×4)
+                            </span>
                                 <span class="tickets__blockBotText">
 технически продуманное и более доступное по сравнению с импортными аналогами решение для строительства промышленных и инфраструктурных объектов                                </span>
                                 <span class="tickets__blockBotPrice">
-                                    345 050 ₽
-                                </span>
+                                345 050 ₽
+                            </span>
                                 <span class="buttonBlack">
-                                    Узнать больше
-                                </span>
+                                Узнать больше
+                            </span>
                             </div>
                         </a>
                     </div>
 
                     <span class="fullWidthButton black">
-                        Показать еще ↓
-                    </span>
+                    Показать еще ↓
+                </span>
+
+
                 </section>
 
-                <section class="contactForm">
-                    <div class="contactForm__left">
-                        <span>
-                            Подпишитесь <br>
-                            на ежемесячную рассылку <br>
-                            для специалистов отрасли <br>
-                        </span>
-                    </div>
-                    <div class="contactForm__right">
-                        <div role="form" class="wpcf7" id="wpcf7-f42198-o2" dir="ltr" lang="ru-RU">
-                            <div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p> <ul></ul></div>
-                            <form action="" method="post" class="wpcf7-form init" novalidate="novalidate" data-status="init">
-                                <div style="display: none;">
-                                    <input type="hidden" name="_wpcf7" value="42198">
-                                    <input type="hidden" name="_wpcf7_version" value="5.4">
-                                    <input type="hidden" name="_wpcf7_locale" value="ru_RU">
-                                    <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f42198-o2">
-                                    <input type="hidden" name="_wpcf7_container_post" value="0">
-                                    <input type="hidden" name="_wpcf7_posted_data_hash" value="">
-                                </div>
-                                <p><span class="wpcf7-form-control-wrap your-email"><input type="email" name="your-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="Email"></span> </p>
-                                <p><span class="wpcf7-form-control-wrap your-name"><input type="text" name="your-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Фамилия, Имя"></span> </p>
-                                <p><span class="wpcf7-form-control-wrap acceptance-new"><span class="wpcf7-form-control wpcf7-acceptance"><span class="wpcf7-list-item"><label><input type="checkbox" name="acceptance-new" value="1" aria-invalid="false"><span class="wpcf7-list-item-label">Я соглашаюсь с условиями обработки персональных данных</span></label></span></span></span></p>
-                                <p><input type="submit" value="Подписаться" class="wpcf7-form-control wpcf7-submit orangeButton"><span class="ajax-loader"></span></p>
-                                <div class="wpcf7-response-output" aria-hidden="true"></div></form></div>
-                    </div>
-                </section>
+                <!--#include virtual="/parts/sendpulse.html" -->
             </div>
         </div>
 
@@ -1548,5 +1487,8 @@
     </div>
 
 </div>
+
+<!--#include virtual="/parts/modalSubscriptionContactForm.html" -->
+<!--#include virtual="/parts/modalSubscriptionSendPulse.html" -->
 
 <!--#include virtual="/parts/footer.html" -->
