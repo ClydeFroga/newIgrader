@@ -1,10 +1,21 @@
 .doubleFoxyB {
 	display: flex;
 	margin-top: 50px;
+	justify-content: space-between;
+	
+	div:first-child, section:first-child {
+		flex-grow: 1;
+	}
+	
 	&__foxyBlock {
 		padding-top: 102px;
 		margin-left: 25px;
 		flex: 0 0 300px;
+	}
+	&.withSlider {
+		.doubleFoxyB__foxyBlock {
+			padding-top: 66px;
+		}
 	}
 }
 
@@ -17,14 +28,23 @@
 	}
 }
 
+@media (max-width: 1023px) {
+	.doubleFoxyB {
+		.doubleFoxyB__foxyBlock.noMargin {
+			padding-top: 0;
+			margin-top: 0;
+		}
+	}
+}
+
 @media (max-width: 767px) {
 	.doubleFoxyB {
 		margin-top: 20px;
 		flex-direction: column;
 		&__foxyBlock {
 			margin-top: 50px;
-			padding-top: 0;
-			margin-left: 0;
+			padding-top: 0 !important;
+			margin-left: 0 !important;
 			max-width: unset;
 			flex: 0 0 100%;
 		}

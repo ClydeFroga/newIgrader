@@ -94,6 +94,10 @@
       margin: 0;
       //color: $brown3;
     }
+    &.transparent {
+      border: 1px solid #768B9C;
+      color: #768B9C;
+    }
     &.dark {
       background-color: $color1;
       border: none;
@@ -110,6 +114,24 @@
     color: $dark;
     &.dark {
       color: $dark;
+    }
+  }
+  
+  .time {
+    font-size: 12px;
+    line-height: 150%;
+    color: $dark;
+    &:before {
+      content: '';
+      width: 12px;
+      height: 10px;
+      background: url("svg/assets/clock.svg");
+      background-repeat: no-repeat !important;
+      position: relative;
+      left: 0;
+      top: 1px;
+      display: inline-flex;
+      margin-right: 5px;
     }
   }
 }

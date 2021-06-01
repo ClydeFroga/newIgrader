@@ -1,0 +1,161 @@
+.rubric {
+	&__top {
+		display: grid;
+		grid-template:
+		"breadcrumbs img"
+		"line img"
+		"desc img";
+		gap: 35px;
+		.breadcrumbs {
+			grid-area: breadcrumbs;
+			margin-bottom: 0;
+			align-self: flex-start;
+		}
+		&Img {
+			grid-area: img;
+		}
+		&Line {
+			grid-area: line;
+			display: flex;
+			align-items: center;
+			align-self: center;
+			&Title {
+				font-weight: bold;
+				font-size: 31px;
+				line-height: 41px;
+				color: #27343F;
+			}
+			&Amount {
+				margin-left: 15px;
+				font-size: 12px;
+				line-height: 150%;
+				color: #768B9C;
+				padding: 5px 10px;
+				border: 1px solid #768B9C;
+				border-radius: 10px 0;
+				margin-bottom: -8px;
+			}
+		}
+		&Description {
+			grid-area: desc;
+			align-self: flex-end;
+			font-size: 16px;
+			line-height: 150%;
+			color: #27343F;
+			margin-bottom: 15px;
+		}
+	}
+	.horizontalBar {
+		&__blc {
+			border-bottom: 1px solid rgba(118, 139, 156, 0.5);
+			&Left {
+				flex: 0 0 33%;
+			}
+			&:last-child {
+				padding-bottom: 25px;
+			}
+		}
+		
+	}
+	.buttonBlack {
+		display: block;
+		margin-top: 15px;
+		max-width: 100%;
+		text-align: center;
+	}
+	> div, > section {
+		margin-bottom: 35px;
+	}
+}
+
+.rubricPage {
+	&__middle {
+		margin: 20px 0;
+	}
+}
+
+@media (max-width: 1023px) {
+	.rubric {
+		&__top {
+			grid-template:
+			"breadcrumbs img"
+			"line img"
+			"desc desc" /
+			1fr 1.9fr
+		;
+			gap: 20px;
+			&Line {
+				flex-direction: column;
+				align-items: flex-start;
+				align-self: flex-end;
+				&Amount {
+					margin-left: 0;
+					margin-top: 15px;
+					margin-bottom: 0;
+				}
+			}
+
+		}
+		.horizontalBar:not(.text) {
+			.horizontalBar__blc {
+				padding-bottom: 20px;
+				margin-bottom: 20px;
+				&RightText {
+					display: none;
+				}
+			}
+		}
+
+	}
+}
+
+
+@media (max-width: 767px) {
+	.rubric {
+		&__top {
+			grid-template:
+			"breadcrumbs"
+			"line"
+			;
+
+			&Img, &Description {
+				display: none;
+			}
+		}
+		.horizontalBar:not(.firstBack) {
+			margin-top: 20px;
+			.horizontalBar__blc {
+				&RightTitle {
+					font-size: 12px;
+					line-height: 150%;
+				}
+			}
+		}
+		.horizontalBar.firstBack {
+			> a:first-child {
+				flex-direction: column;
+				.horizontalBar__blcRightTitle {
+					font-size: 16px;
+					line-height: 150%;
+				}
+				.horizontalBar__blcRightText {
+					font-size: 12px;
+					line-height: 150%;
+				}
+				.imgBlock {
+					padding-top: 77.6%;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 360px) {
+	.rubric {
+
+		.horizontalBar.firstBack {
+			margin-left: -5px;
+			margin-right: -5px;
+		}
+	}
+}

@@ -1,7 +1,7 @@
 .textModule {
 	&__container {
 		display: grid;
-		grid-template-columns: 1fr 1fr;
+		grid-template-columns: repeat(2, 1fr);
 		gap: 15px 20px;
 		
 		&Block {
@@ -22,11 +22,27 @@
 			}
 		}
 	}
+	&.four {
+		.textModule__container {
+			grid-template-columns: repeat(4, 1fr);
+		}
+	}
+	
+}
+@media (max-width: 1023px) {
+	.textModule {
+		&.four {
+			.textModule__container {
+				grid-template-columns: repeat(2, 1fr);
+			}
+		}
+	}
 }
 @media (max-width: 767px) {
 	.textModule {
 		&__container {
-			grid-template-columns: 1fr ;
+			grid-template-columns: 1fr !important;
 		}
+		
 	}
 }

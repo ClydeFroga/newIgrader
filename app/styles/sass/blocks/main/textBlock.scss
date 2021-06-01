@@ -6,4 +6,18 @@
 		line-height: 150%;
 		margin-bottom: 12px;
 	}
+	.dateAndViews {
+		margin-top: 15px;
+	}
+}
+.rightAside__border {
+	.textBlock {
+		&__block {
+			&:not(:last-child) {
+				margin-bottom: 16px;
+				padding-bottom: 16px;
+				border-bottom: 1px solid rgba(118, 139, 156, 0.5);
+			}
+		}
+	}
 }

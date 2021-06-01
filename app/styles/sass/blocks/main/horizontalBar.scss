@@ -13,6 +13,7 @@
 			display: flex;
 			flex-direction: column;
 			justify-content: space-between;
+			row-gap: 10px;
 			&Title {
 				display: block;
 				font-size: 18px;
@@ -21,7 +22,9 @@
 				color: $color1;
 			}
 			&Text {
-			
+				font-size: 16px;
+				line-height: 150%;
+				color: #27343F;
 			}
 		}
 	}
@@ -68,6 +71,26 @@
 				}
 				flex: 0 0 100%;
 			}
+		}
+	}
+	&.around {
+		.horizontalBar__blcRight {
+			justify-content: space-around;
+		}
+	}
+	&.firstBack {
+		> a:first-child {
+			padding: 22px 13px;
+			background-color: #EBEEF0;
+			border: none;
+			.category {
+				color: #768B9C;
+				border-color: #768B9C;
+			}
+		}
+		> a:nth-child(2) {
+			border-top: 1px solid rgba(118, 139, 156, 0.5);
+			padding-top: 25px;
 		}
 	}
 }

@@ -44,3 +44,9 @@
 		background-color: $accent;
 	}
 }
+
+@media (max-width: 767px) {
+	.largeTitle {
+		margin-bottom: 25px;
+	}
+}

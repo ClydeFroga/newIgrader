@@ -71,6 +71,25 @@
 			}
 		}
 	}
+	&.simple {
+		.largeTitle {
+			margin-left: 15px;
+		}
+		.verticalBlock__bot {
+			&Block {
+				display: block;
+				padding: 15px;
+				transition: background-color .2s;
+				&Title {
+					margin-top: 15px;
+					font-size: 18px;
+				}
+				&:hover {
+					background-color: #E4E8EB;
+				}
+			}
+		}
+	}
 }
 
 @media (max-width: 1023px) {
@@ -92,6 +111,16 @@
 		}
 		&__botBlockText {
 			font-size: 12px;
+		}
+		&.simple {
+			.verticalBlock__bot {
+				&Block {
+					padding: 0;
+					&:hover {
+						background-color: transparent;
+					}
+				}
+			}
 		}
 	}
 }

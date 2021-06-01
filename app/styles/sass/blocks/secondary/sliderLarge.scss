@@ -105,14 +105,17 @@
 			.dateAndViews {
 				margin: 30px 0;
 			}
+			&Image {
+				flex: unset;
+			}
 		}
 		&__left {
-			top: 30%;
+			top: 25%;
 			left: 0;
 			right: unset;
 		}
 		&__right {
-			top: 30%;
+			top: 25%;
 			right: 0;
 		}
 	}

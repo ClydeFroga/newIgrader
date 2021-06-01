@@ -117,6 +117,28 @@ function slider() {
             nextEl: '#sliderSec2__toRight',
         },
     });
+    let sliderSec3 = new Swiper('#sliderSec3', {
+        spaceBetween: 0,
+        slidesPerView: 1,
+        allowTouchMove: true,
+        
+        breakpoints: {
+            768: {
+                slidesPerView: 2,
+            },
+            1280: {
+                slidesPerView: 3,
+            },
+        },
+        pagination: {
+            el: "#sliderSec3__pagination",
+            clickable: true
+        },
+        navigation: {
+            prevEl: '#sliderSec3__toLeft',
+            nextEl: '#sliderSec3__toRight',
+        },
+    });
     let sliderBot = new Swiper('#sliderBot', {
         spaceBetween: 30,
         slidesPerColumnFill: 'row',

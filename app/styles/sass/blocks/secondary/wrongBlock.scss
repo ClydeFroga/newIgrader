@@ -1,0 +1,24 @@
+.wrongBlock {
+	&__blc {
+		display: flex;
+		flex-direction: column;
+		.imgBlock {
+			padding-top: 36.6%;
+			max-width: 50%;
+		}
+		&Title {
+			margin: 15px 0;
+			font-size: 12px;
+			line-height: 150%;
+		}
+		&Price {
+			font-weight: 600;
+			font-size: 16px;
+			line-height: 150%;
+		}
+		&:not(:last-child ) {
+			margin-bottom: 15px;
+		}
+	}
+	
+}

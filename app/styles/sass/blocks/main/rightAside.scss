@@ -13,6 +13,12 @@
 		background-color: #EFEFEF;
 	}
 	
+	&__border {
+		padding: 25px 30px;
+		border: 1px solid #768B9C;
+		box-sizing: border-box;
+	}
+	
 	> div {
 		padding: 25px 30px;
 		&:not(:last-child) {
