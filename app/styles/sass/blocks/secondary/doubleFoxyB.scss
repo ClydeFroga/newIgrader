@@ -3,7 +3,7 @@
 	margin-top: 50px;
 	justify-content: space-between;
 	
-	div:first-child, section:first-child {
+	> div:first-child, > section:first-child {
 		flex-grow: 1;
 	}
 	
@@ -12,9 +12,25 @@
 		margin-left: 25px;
 		flex: 0 0 300px;
 	}
+	&.reverse {
+		.largeTitle {
+			margin-bottom: 25px;
+		}
+		
+		.doubleFoxyB__foxyBlock {
+			padding-top: 0;
+			margin-left: 0;
+			margin-right: 25px;
+		}
+	}
 	&.withSlider {
 		.doubleFoxyB__foxyBlock {
 			padding-top: 66px;
+		}
+	}
+	&.end {
+		.doubleFoxyB__foxyBlock {
+			align-self: flex-end;
 		}
 	}
 }
@@ -45,8 +61,15 @@
 			margin-top: 50px;
 			padding-top: 0 !important;
 			margin-left: 0 !important;
+			margin-right: 0 !important;
 			max-width: unset;
 			flex: 0 0 100%;
+		}
+		&.reverse {
+			.doubleFoxyB__foxyBlock {
+				margin-top: 0 !important;
+				margin-bottom: 25px !important;
+			}
 		}
 	}
 }

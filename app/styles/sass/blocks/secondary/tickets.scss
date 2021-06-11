@@ -1,6 +1,4 @@
 .tickets {
-	margin-top: 40px;
-	
 	> div {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -9,9 +7,6 @@
 	.largeTitle {
 		margin-bottom: 30px;
 	}
-	
-
-	
 	&__block {
 		display: flex;
 		flex-direction: column;
@@ -57,6 +52,41 @@
 			}
 		}
 	}
+	
+	&.news {
+		margin-top: 25px;
+		.tickets__block {
+			&Bot {
+				padding-top: 40px;
+				&Title {
+					font-size: 18px;
+				}
+				&Text {
+					margin-top: 15px;
+					margin-bottom: 0;
+					font-size: 16px;
+				}
+			}
+		}
+	}
+	&.events {
+		margin-top: 0;
+		> div {
+			grid-template-columns: repeat(3, 1fr);
+		}
+		.tickets__block {
+			position: relative;
+			.category.dark {
+				position: absolute;
+				top: 0;
+				right: 0;
+			}
+			&Bot {
+				padding-top: 30px;
+			}
+		}
+	}
+
 }
 
 @media (max-width: 1279px) {
@@ -64,6 +94,23 @@
 		>div {
 			grid-template-columns: repeat(2, 1fr);
 			gap: 20px;
+		}
+		&.events {
+			> div {
+				grid-template-columns: repeat(2, 1fr);
+			}
+		}
+
+	}
+}
+
+@media (max-width: 1023px) {
+	.tickets.single {
+		.tickets__blockBotText, .buttonBlack {
+			display: none;
+		}
+		.tickets__blockBotPrice {
+			margin: 0;
 		}
 	}
 }
@@ -90,6 +137,16 @@
 			}
 			&BotTitle {
 				font-size: 12px;
+			}
+		}
+		&.events {
+			> div {
+				grid-template-columns: 1fr;
+			}
+		}
+		&.block {
+			.tickets__blockBotTitle {
+				font-weight: normal;
 			}
 		}
 	}

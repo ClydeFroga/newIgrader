@@ -60,19 +60,18 @@ function slider() {
     let sliderSec1 = new Swiper('#sliderSec1', {
         spaceBetween: 20,
         slidesPerColumnFill: 'column',
-        slidesPerView: 1,
-        slidesPerColumn: 4,
-        allowTouchMove: false,
+        slidesPerView: 1.3,
+        slidesPerColumn: 1,
+        allowTouchMove: true,
         
         breakpoints: {
             768: {
-                allowTouchMove: true,
                 slidesPerColumnFill: 'row',
-                slidesPerView: 2,
-                slidesPerColumn: 2,
+                slidesPerView: 3,
+                slidesPerColumn: 1,
             },
             1024: {
-                allowTouchMove: true,
+                allowTouchMove: false,
                 slidesPerColumn: 1,
                 slidesPerView: 2,
             },
@@ -89,6 +88,11 @@ function slider() {
         navigation: {
             prevEl: '#sliderSec1__toLeft',
             nextEl: '#sliderSec1__toRight',
+        },
+        scrollbar: {
+            el: '#sliderSec1__scrollBar',
+            draggable: false,
+            hide: false,
         },
     });
     let sliderSec2 = new Swiper('#sliderSec2', {

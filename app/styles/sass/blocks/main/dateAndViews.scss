@@ -1,6 +1,7 @@
 .dateAndViews {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   span , a {
     //color: $grey3;
     font-size: 12px;
@@ -12,30 +13,42 @@
   }
 
   .eventsDate {
-    //padding: 12px 35px;
+    display: flex;
+    align-items: center;
     margin-top: 8px;
-    //color: $main-color;
-    background-color: white;
-    font-size: 10px;
-    line-height: 16px;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
+    background-color: #B7C1CA;
+    padding: 7px 12px;
+    border-radius: 10px 0;
+    font-size: 12px;
+    line-height: 150%;
+
+    &:before {
+      content: '';
+      width: 23px;
+      height: 18px;
+      background: url("svg/assets/clock2.svg");
+      background-repeat: no-repeat !important;
+      position: relative;
+      left: 0;
+      top: 0px;
+      display: inline-flex;
+      margin-right: 10px;
+    }
   }
 
   .city {
     display: block;
     font-size: 12px;
     line-height: 150%;
-
+  
     &:before {
       content: '';
       width: 18px;
       height: 21px;
       background: url("svg/assets/city.svg");
-      background-repeat: no-repeat;
+      background-repeat: no-repeat !important;
       position: relative;
-      left: 0;
-      top: 6px;
+      top: 5px;
       display: inline-flex;
       margin-right: 10px;
     }
@@ -43,6 +56,9 @@
 
   .views {
     display: inline-flex;
+    div {
+      line-height: 14px;
+    }
     &:before {
       content: '';
       width: 12px;
@@ -99,8 +115,9 @@
       color: #768B9C;
     }
     &.dark {
+      color: #f8f8f8;
       background-color: $color1;
-      border: none;
+      border-color: $color1;
     }
     &.orange {
       background-color: $accent;
@@ -138,6 +155,7 @@
 
 .dateAndViews.start {
   justify-content: flex-start;
+
 }
 
 @media (max-width: 1023px) {

@@ -35,9 +35,9 @@ function menuToggle() {
       }
     
       gsap.to(asideMenu, {display: 'block', right: 0, duration: 0.3,  ease: "power1.out"})
-      
-
-      localStorage.removeItem('menuCollapsed')
+  
+  
+      sessionStorage.removeItem('menuCollapsed')
     }
     else {
       //Сворот
@@ -55,8 +55,8 @@ function menuToggle() {
         containerWidthAfter = container.clientWidth
         menu.classList.toggle('leftDestroy')
       }, 400)
-      
-      localStorage.setItem('menuCollapsed', 'true')
+  
+      sessionStorage.setItem('menuCollapsed', 'true')
     }
   }
   else {
@@ -68,7 +68,7 @@ function menuToggle() {
 
 let width = document.documentElement.clientWidth;
 
-if (localStorage.getItem("menuCollapsed") === "true") {
+if (sessionStorage.getItem("menuCollapsed") === "true") {
   if(width > 1023) {
     menu.classList.add("leftDestroy", "first");
   }

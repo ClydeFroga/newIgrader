@@ -92,9 +92,6 @@
 					&:not(:last-child) {
 						margin-bottom: 30px;
 					}
-					&:nth-child(n + 5) {
-						display: none;
-					}
 				}
 			}
 			&.inColumnTablet {
@@ -168,9 +165,6 @@
 					&RightTitle {
 						margin-bottom: 25px;
 					}
-					&:nth-child(n + 4) {
-						display: none;
-					}
 					&Left {
 						flex: 0 0 50%;
 						padding-top: 37%;
@@ -181,11 +175,24 @@
 					}
 				}
 			}
-
+			&.flat {
+				.horizontalBar {
+					&__blc {
+						flex-wrap: nowrap;
+						&Right {
+							margin-top: unset;
+							flex: unset;
+							&Title {
+								font-weight: bold;
+								font-size: 12px;
+								line-height: 150%;
+								margin: 0;
+							}
+						}
+					}
+				}
+			}
 		}
 		
-		&__third {
-		
-		}
 	}
 }

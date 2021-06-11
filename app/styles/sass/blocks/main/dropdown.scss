@@ -1,4 +1,4 @@
-.dropdown {
+.menu-item-has-children {
 	position: relative;
 	display: inline-block;
 	> a:after {
@@ -11,7 +11,7 @@
 		display: inline-block;
 	}
 }
-.dropdown.open {
+.menu-item-has-children.open {
 	background-color: #F8F8F8;
 	> a {
 		

@@ -29,7 +29,8 @@ function svg() {
 				}
 			}
 		))
-		.pipe(dest('app/css/svg/out'));
+		.pipe(dest('app/css/svg/out'))
+		.pipe(dest("C:\\xampp\\htdocs\\igrader\\wp-content\\themes\\igraderNew\\svg\\out"))
 }
 
 function browsersync() {
@@ -46,9 +47,9 @@ function browsersync() {
 }
 
 function scripts() {
-	return src(['app/js/app.js', '!app/js/*.min.js'])
+	return src('app/js/app.js')
 		.pipe(webpack({
-			mode: 'development',
+			mode: 'production',
 			performance: { hints: false },
 			module: {
 				rules: [
@@ -68,6 +69,7 @@ function scripts() {
 		})
 		.pipe(rename('app.min.js'))
 		.pipe(dest('app/js'))
+		.pipe(dest("C:\\xampp\\htdocs\\igrader\\wp-content\\themes\\igraderNew\\js"))
 		.pipe(browserSync.stream())
 }
 
@@ -80,6 +82,7 @@ function stylesMain() {
 		.pipe(cleancss({ level: { 1: { specialComments: 0 } },/* format: 'beautify' */ }))
 		.pipe(rename('style.css'))
 		.pipe(dest('app/css'))
+		.pipe(dest("C:\\xampp\\htdocs\\igrader\\wp-content\\themes\\igraderNew"))
 		.pipe(browserSync.stream())
 }
 
@@ -92,6 +95,7 @@ function stylesSec() {
 		.pipe(cleancss({ level: { 1: { specialComments: 0 } },/* format: 'beautify' */ }))
 		.pipe(rename('styleSec.css'))
 		.pipe(dest('app/css'))
+		.pipe(dest("C:\\xampp\\htdocs\\igrader\\wp-content\\themes\\igraderNew"))
 		.pipe(browserSync.stream())
 }
 

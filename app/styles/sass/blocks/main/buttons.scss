@@ -69,7 +69,20 @@
 }
 
 .hiddenButton {
+	max-width: max-content;
+	padding: 10px 25px;
+	border: 1px solid $dark;
+	color: $darker;
+	margin-top: 45px;
+	font-weight: bold;
+	font-size: 12px;
+	line-height: 150%;
+	cursor: pointer;
 	display: none;
+	&.notHidden {
+		margin-top: 15px;
+		display: inline-block;
+	}
 }
 
 .fullWidthButton {
@@ -102,7 +115,12 @@
 	line-height: 150%;
 	padding: 12px 25px;
 	max-width: max-content;
-
+	&.full {
+		margin-top: 30px;
+		max-width: unset;
+		display: flex;
+		justify-content: center;
+	}
 }
 
 @media (max-width: 1023px) {
@@ -129,15 +147,6 @@
 		}
 	}
 	.hiddenButton {
-		max-width: max-content;
-		padding: 10px 25px;
-		border: 1px solid $dark;
-		color: $darker;
-		margin-top: 45px;
-		font-weight: bold;
-		font-size: 12px;
-		line-height: 150%;
-		cursor: pointer;
 		display: inline-block;
 	}
 }

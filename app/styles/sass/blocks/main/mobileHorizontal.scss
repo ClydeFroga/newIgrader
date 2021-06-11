@@ -1,0 +1,41 @@
+.mobileHorizontal {
+	&__blc {
+		display: block;
+		&:not(:last-child) {
+			margin-bottom: 20px;
+		}
+		&Inner {
+			background-color: #d5dce1;
+			display: flex;
+			.imgBlock {
+				padding-top: 33.6%;
+				flex: 0 0 45%;
+			}
+			.dateAndViews {
+				
+				display: flex;
+				padding: 13px;
+				flex-direction: column;
+				justify-content: space-between;
+				
+				span {
+					color: $dark;
+				}
+			}
+		}
+		&Title {
+			font-weight: bold;
+			font-size: 16px;
+			line-height: 150%;
+			color: $color1;
+			display: block;
+			margin-top: 12px;
+		}
+	}
+	.foxyA {
+		a {
+			margin: auto;
+		}
+		margin-bottom: 20px;
+	}
+}

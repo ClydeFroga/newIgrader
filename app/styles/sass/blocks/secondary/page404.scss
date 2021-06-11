@@ -1,0 +1,23 @@
+.page404 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	img {
+		max-width: 60%;
+		flex: 0 0 60%;
+		width: 100%;
+		height: auto;
+	}
+	form {
+		margin-top: 50px;
+		width: 60%;
+		label {
+			width: 100%;
+			input {
+				width: 100%;
+
+			}
+		}
+	}
+}

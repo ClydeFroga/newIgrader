@@ -12,12 +12,12 @@
 		display: flex;
 		flex-direction: column;
 		border: 1px solid #F8F8F8;
+		background-color: #F8F8F8;
 		.imgBlock {
 			padding-top: 75%;
 		}
 		&Links {
 			padding: 30px;
-			background-color: #F8F8F8;
 			a {
 				display: block;
 				font-size: 12px;
@@ -34,21 +34,112 @@
 			margin-right: 30px;
 		}
 	}
+	&.brandPage {
+		margin: 0;
+		> div {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 25px;
+		}
+
+		.brandsList__block {
+			transition: all .2s;
+			margin: 0;
+			img {
+				transition: all .2s;
+			}
+			&Links {
+				display: flex;
+				flex-direction: column;
+				p {
+					font-weight: bold;
+					font-size: 16px;
+					line-height: 150%;
+					color: #3B5266;
+				}
+				p, span {
+					transition: all .2s;
+				}
+			}
+			&Hidden {
+				transition: all .2s;
+				display: block;
+				position: absolute;
+				font-weight: bold;
+				font-size: 16px;
+				line-height: 150%;
+				color: #fafafa;
+				opacity: 0;
+				margin: auto;
+				padding: 0 30px;
+				top: 40%;
+				text-decoration: underline;
+			}
+			&:hover {
+				background-color: #3B5266;
+				.imgBlock {
+					display: flex;
+					flex-direction: column;
+					flex-grow: 1;
+				}
+				img {
+					opacity: 0;
+				}
+				.brandsList__block {
+					&Links {
+						p, span {
+							color: #fafafa;
+						}
+						.hiddenButton {
+							background-color: #F89B00;
+							border-color: #F89B00;
+						}
+					}
+					&Hidden {
+						opacity: 1;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 1700px) {
+	.brandsList {
+		&.brandPage {
+			> div {
+				grid-template-columns: repeat(2, 1fr);
+			}
+		}
+	}
 }
 
 @media (max-width: 1023px) {
 	.brandsList {
-		&__block:nth-child(n + 2) {
-			margin: 0 !important;
-		}
-		&__block:nth-child(n + 3) {
-			display: none;
+		&.double {
+			> div {
+				display: grid;
+				gap: 25px;
+				grid-template-columns: repeat(2, 1fr);
+				.brandsList__block {
+					margin: 0;
+				}
+			}
 		}
 	}
 }
 
 @media (max-width: 767px) {
 	.brandsList {
-		display: none;
+		&.brandPage {
+			> div {
+				grid-template-columns: 1fr;
+			}
+		}
+		&.double {
+			> div {
+				grid-template-columns: 1fr;
+			}
+		}
 	}
 }

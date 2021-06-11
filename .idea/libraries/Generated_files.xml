@@ -70,6 +70,8 @@
         <item url="file://$PROJECT_DIR$/../../../../../xampp/htdocs/igrader/wp-content/themes/igrader/js/localStorage.min.js" />
         <item url="file://$PROJECT_DIR$/../../../../../xampp/htdocs/igrader/wp-content/themes/igrader/js/newHeader.min.js" />
         <item url="file://$PROJECT_DIR$/../../../../../xampp/htdocs/igrader/wp-content/themes/igrader/js/validate.min.min.js" />
+        <item url="file://$PROJECT_DIR$/../../../../../xampp/htdocs/igrader/wp-content/themes/igraderNew/js/loadMores.min.js" />
+        <item url="file://$PROJECT_DIR$/../../../../../xampp/htdocs/igrader/wp-content/themes/igraderNew/js/menuToggle.min.min.js" />
         <item url="file://$PROJECT_DIR$/../../../../../xampp/htdocs/lesk/wp-content/themes/forest/js/app.min.min.js" />
         <item url="file://$PROJECT_DIR$/../../../../../xampp/htdocs/lesk/wp-content/themes/forest/js/filter.min.js" />
         <item url="file://$PROJECT_DIR$/../../../../../xampp/htdocs/lesk/wp-content/themes/forest/js/foxySticky.min.js" />
@@ -150,6 +152,8 @@
       <root url="file://$PROJECT_DIR$/../../../../../xampp/htdocs/igrader/wp-content/themes/igrader/js/localStorage.min.js" />
       <root url="file://$PROJECT_DIR$/../../../../../xampp/htdocs/igrader/wp-content/themes/igrader/js/newHeader.min.js" />
       <root url="file://$PROJECT_DIR$/../../../../../xampp/htdocs/igrader/wp-content/themes/igrader/js/validate.min.min.js" />
+      <root url="file://$PROJECT_DIR$/../../../../../xampp/htdocs/igrader/wp-content/themes/igraderNew/js/loadMores.min.js" />
+      <root url="file://$PROJECT_DIR$/../../../../../xampp/htdocs/igrader/wp-content/themes/igraderNew/js/menuToggle.min.min.js" />
       <root url="file://$PROJECT_DIR$/../../../../../xampp/htdocs/lesk/wp-content/themes/forest/js/app.min.min.js" />
       <root url="file://$PROJECT_DIR$/../../../../../xampp/htdocs/lesk/wp-content/themes/forest/js/filter.min.js" />
       <root url="file://$PROJECT_DIR$/../../../../../xampp/htdocs/lesk/wp-content/themes/forest/js/foxySticky.min.js" />

@@ -197,6 +197,11 @@
 				min-height: unset;
 			}
 		}
+		&.pit-stop {
+			.backgroundBlock__blockTextInner {
+				justify-content: flex-end;
+			}
+		}
 	}
 }
 

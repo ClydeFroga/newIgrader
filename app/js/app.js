@@ -166,4 +166,54 @@ document.addEventListener('DOMContentLoaded', () => {
       item.addEventListener('click', modalWindowSendpulse)
     }
   }
+  
+  class filter {
+    constructor(block) {
+      this.block = block
+      this.motherBlock = null
+      this.bot = null
+    }
+    addClassToButton(e) {
+      e.target.classList.toggle('dark')
+      let id = e.target.id
+      let selected = this.motherBlock.querySelectorAll(`a.${id}`)
+      this.check()
+      this.addClassToBlocks(selected)
+    }
+    check() {
+      let pressed = this.block.querySelector('.dark')
+
+      if(pressed) {
+        this.bot.classList.add('filterOn')
+      } else {
+        this.bot.classList.remove('filterOn')
+      }
+    }
+    addListeners() {
+      for(let item of this.block.children) {
+        item.addEventListener('click', this.addClassToButton.bind(this))
+      }
+    }
+    addClassToBlocks(selected) {
+      for(let item of selected) {
+        item.classList.toggle('filtered')
+      }
+    }
+    setVals() {
+      if(this.motherBlock == null) {
+        this.motherBlock = this.block.parentElement.parentElement.parentElement;
+        this.bot = this.motherBlock.querySelector('.verticalBlock__bot')
+      }
+      this.addListeners()
+    }
+    
+  }
+  
+  let filterButtonsBlocks = document.querySelectorAll('.slider__top .dateAndViews')
+  if(filterButtonsBlocks.length > 0) {
+    for(let filterBlock of filterButtonsBlocks) {
+      let cc = new filter(filterBlock)
+      cc.setVals()
+    }
+  }
 })

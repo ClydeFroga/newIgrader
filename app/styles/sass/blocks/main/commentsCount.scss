@@ -6,7 +6,7 @@
 	line-height: 150%;
 	color: $dark;
 	&:before {
-		content: url(svg/assets/comment.svg);
+		content: url("svg/assets/comment.svg");
 		margin-right: 5px;
 	}
 }

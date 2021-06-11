@@ -10,7 +10,7 @@
             <div class="container top">
                 <!--#include virtual="/parts/headerMenu.html" -->
 
-                <section class="withFoxy ">
+                <section class="withFoxy string">
                     <div class="rubric">
                         <div class="rubric__top">
                             <div class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList">
@@ -38,19 +38,19 @@
                                 <img src="https://picsum.photos/800/600">
                             </div>
                             <div class="rubric__topLine">
-                                <span class="rubric__topLineTitle">
+                                <span class="rubricTitle">
                                     Рынок
                                 </span>
-                                    <span class="rubric__topLineAmount">
+                                <span class="rubric__topLineAmount">
                                     1458 статей
                                 </span>
                             </div>
-                            <span class="rubric__topDescription">
-                            Разнообразный и богатый опыт консультация с широким активом обеспечивает широкому кругу. Значимость этих проблем настолько очевидна, что консультация с широким активом играет важную роль в формировании новых предложений.
-                        </span>
+                            <span class="rubric__topDescription rubricDesc">
+                                Разнообразный и богатый опыт консультация с широким активом обеспечивает широкому кругу. Значимость этих проблем настолько очевидна, что консультация с широким активом играет важную роль в формировании новых предложений.
+                            </span>
                         </div>
 
-                        <div class="horizontalBar around firstBack ">
+                        <div class="horizontalBar withBorder around firstBack ">
                             <a href="#" class="horizontalBar__blc">
                                 <div class="horizontalBar__blcLeft imgBlock">
                                     <img src="https://picsum.photos/800/600?random=1">
@@ -499,7 +499,10 @@
                         </div>
                         <span class="hiddenButton">Показать все →</span>
                     </div>
-                    <!--#include virtual="/parts/foxyB2.html" -->
+                    <div class="secondaryText__foxy">
+                        <!--#include virtual="/parts/foxyB2.html" -->
+                    </div>
+
                 </section>
 
                 <!--#include virtual="/parts/foxyD2.html" -->
@@ -905,19 +908,10 @@
         </div>
 
 
-
-
     </div>
 
 </div>
 
-<script src="js/sticky.js"></script>
-
-<script>
-  window.addEventListener('load', () => {
-    stickyScrollWatch()
-  })
-</script>
 
 
 <!--#include virtual="/parts/modalSubscriptionContactForm.html" -->

@@ -4,7 +4,7 @@
 <div class="wrapper">
     <!--#include virtual="/parts/leftAside.html" -->
 
-    <div class="wrapper__block">
+    <div class="wrapper__block marginAll">
 
         <div class="wrapper__content">
             <div class="container top">
@@ -12,7 +12,7 @@
 
                 <section class="backgroundBlock">
                     <div>
-                        <a href="" class="backgroundBlock__spec">
+                        <a href="#" class="backgroundBlock__spec">
                             <div class="backgroundBlock__block" style='background-image: url("https://picsum.photos/800/600?random=1")'>
                                 <div class="backgroundBlock__blockText">
                                     <div class="backgroundBlock__blockTextInner">
@@ -62,7 +62,6 @@
                                 Дорожные катки SHANTUI: время надёжных дорог
                             </div>
                         </a>
-
                         <a href="#" class="backgroundBlock__spec">
                             <div class="backgroundBlock__block" style='background-image: url("https://picsum.photos/800/600?random=1")'>
                                 <div class="backgroundBlock__blockText">
@@ -85,7 +84,6 @@
                                 Дорожные катки SHANTUI: время надёжных дорог
                             </div>
                         </a>
-
                         <a href="#" class="backgroundBlock__spec">
                             <div class="backgroundBlock__block" style='background-image: url("https://picsum.photos/800/600?random=1")'>
                                 <div class="backgroundBlock__blockText">
@@ -110,7 +108,6 @@
                         </a>
                         <!--#include virtual="/parts/foxyA.html" -->
                     </div>
-
                 </section>
 
                 <section class="sliderTop">
@@ -232,8 +229,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <div id="sliderTop__scrollBar" class="slider__scrollbar">
-                            </div>
+                            <div id="sliderTop__scrollBar" class="slider__scrollbar"></div>
                         </div>
                     </div>
                     <div>
@@ -263,7 +259,10 @@
                 <!--#include virtual="/parts/foxyD1.html" -->
 
                 <section class="secondaryText">
-                    <!--#include virtual="/parts/foxyB2.html" -->
+                    <div class="secondaryText__foxy">
+                        <!--#include virtual="/parts/foxyB2.html" -->
+                    </div>
+
                     <div class="textModule">
                         <a class="largeTitle" href="#">
                             Новости
@@ -323,7 +322,10 @@
 
                 <!--грузить только 4 слайда на мобилках, на остальном 6-->
                 <section class="secondarySlider">
-                    <!--#include virtual="/parts/foxyB3.html" -->
+                    <div class="secondarySlider__foxy">
+                        <!--#include virtual="/parts/foxyB3.html" -->
+                    </div>
+
                     <div class="sliderTransform slider verticalBlock">
                         <div class="slider__top">
                             <a href="#" class="largeTitle">Обзор техники</a>
@@ -798,7 +800,7 @@
                        Пит-стоп
                     </span>
                 </a>
-                <section class="backgroundBlock backgroundBlockMiddle">
+                <section class="pit-stop backgroundBlock backgroundBlockMiddle">
                     <!--грузить только 3 на мобилках, на остальном 6-->
                     <a href="" class="backgroundBlock__spec">
                         <div class="backgroundBlock__block" style="background-image: url('https://picsum.photos/800/600?random=1')">

@@ -1,0 +1,22 @@
+.newsPage {
+	.rubricDesc {
+		margin-top: 35px;
+	}
+	> div, > section {
+		margin-bottom: 35px;
+	}
+}
+
+@media (max-width: 767px) {
+	.newsPage {
+		.horizontalBar__blcRightText {
+			display: none;
+		}
+		.rubricDesc {
+			display: none;
+		}
+		&__top {
+			margin-bottom: 30px;
+		}
+	}
+}

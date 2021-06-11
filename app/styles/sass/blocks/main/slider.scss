@@ -5,6 +5,9 @@
 		margin-bottom: 18px;
 		display: flex;
 		justify-content: space-between;
+		.largeTitle {
+			margin: 0;
+		}
 		.dateAndViews {
 			justify-content: flex-start;
 			flex-wrap: wrap;
@@ -18,11 +21,12 @@
 			}
 		}
 		&Control {
+			margin-left: auto;
 			display: flex;
 			//align-items: center;
 			margin-right: 5px;
 			padding: 0 13px;
-			margin-left: 15px;
+			
 		}
 	}
 	&__pagination {
@@ -57,6 +61,7 @@
 		margin-left: 13px;
 		transform: rotate(90deg);
 	}
+
 }
 
 @media (max-width: 1023px) {
@@ -75,7 +80,7 @@
 @media (max-width: 767px) {
 	.slider {
 		&__top {
-			display: none;
+			//display: none;
 		}
 		&__scrollbar {
 			margin-top: 30px;

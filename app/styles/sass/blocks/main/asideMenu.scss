@@ -47,7 +47,7 @@ $paddingLeft: 17%;
 				&:not(:last-child) {
 					border-top: 1px solid #EBEDEF;
 				}
-				&.dropdown {
+				&.menu-item-has-children {
 					display: block;
 				}
 				.sub-menu {

@@ -1,0 +1,61 @@
+.pagination {
+	margin-top: 20px;
+	.nav-links {
+		float: right;
+	}
+	a, span {
+		background-color: #f8f8f8;
+		font-weight: 600;
+		font-size: 16px;
+		line-height: 150%;
+		color: #768B9C;
+		padding: 10px 20px;
+		
+		&:hover {
+			border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+			text-decoration: none;
+		}
+
+	}
+	.prev, .next {
+		&:before {
+			content: '';
+			width: 16px;
+			height: 14px;
+			background-repeat: no-repeat !important;
+			position: relative;
+			left: 0;
+			display: inline-flex;
+			margin-right: 5px;
+		}
+	}
+	.prev {
+		padding: 10px 9px 10px 19px;
+		&:before {
+			
+			background: url("svg/assets/shevronLeft.svg");
+		}
+	}
+	.next {
+		padding: 10px 15px;
+		&:before {
+			background: url("svg/assets/shevronLeft.svg");
+			transform: rotate(180deg);
+		}
+	}
+	span.current {
+		//border-bottom: 1px solid rgba(0, 0, 0, 0.38);
+	}
+}
+
+@media (max-width: 1023px) {
+	.pagination {
+		.nav-links {
+			float: unset;
+		}
+		a, span {
+			margin-top: 10px;
+			display: inline-block;
+		}
+	}
+}

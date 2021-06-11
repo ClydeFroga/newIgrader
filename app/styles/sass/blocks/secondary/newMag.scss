@@ -28,15 +28,43 @@
 	}
 }
 
-.subscribe:before {
-	content: url('svg/assets/subscribe.svg');
-	margin-top: 3px;
-	margin-right: 5px;
+.subscribe {
+	&:before {
+		content: url('svg/assets/subscribe.svg');
+		margin-top: 3px;
+		margin-right: 5px;
+	}
+	&.dark {
+		display: inline-flex;
+		align-items: center;
+		&:before {
+			content: url('svg/assets/subscribeDark.svg');
+			height: 22px;
+		}
+	}
 }
-.readOnline:before {
-	content: url('svg/assets/readOnline.svg');
-	margin-right: 5px;
+
+.readOnline {
+	padding-top: 12px;
+	display: inline-flex;
+	&:before {
+		height: 22px;
+		content: url('svg/assets/readOnline.svg');
+		margin-right: 5px;
+	}
 }
+.download {
+	display: inline-flex;
+	align-items: center;
+	border: 1px solid #768B9C;
+	padding: 9px 25px;
+	&:before {
+		height: 22px;
+		content: url('svg/assets/download.svg');
+		margin-right: 5px;
+	}
+}
+
 
 @media (max-width: 1520px) {
 	.newMag {
@@ -70,6 +98,10 @@
 			align-self: flex-end;
 		}
 	}
+	.subscribe, .readOnline, .download {
+		font-size: 12px;
+	}
+	
 }
 
 @media (max-width: 767px) {
