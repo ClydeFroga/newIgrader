@@ -1,5 +1,7 @@
+let sliderTop, sliderSingleTop, sliderSec1, sliderSec2, sliderSec3, sliderBot, sliderLarge, sliderDouble;
+
 function slider() {
-    let sliderTop = new Swiper('#sliderTop', {
+     sliderTop = new Swiper('#sliderTop', {
         spaceBetween: 25,
         slidesPerColumnFill: 'row',
         slidesPerView: 1.3,
@@ -33,7 +35,7 @@ function slider() {
             nextEl: '#sliderTop__toRight',
         },
     });
-    let sliderSingleTop = new Swiper('#sliderSingleTop', {
+     sliderSingleTop = new Swiper('#sliderSingleTop', {
         spaceBetween: 18,
         slidesPerColumnFill: 'row',
         slidesPerView: 1.3,
@@ -57,7 +59,7 @@ function slider() {
             hide: false,
         },
     });
-    let sliderSec1 = new Swiper('#sliderSec1', {
+     sliderSec1 = new Swiper('#sliderSec1', {
         spaceBetween: 20,
         slidesPerColumnFill: 'column',
         slidesPerView: 1.3,
@@ -95,7 +97,7 @@ function slider() {
             hide: false,
         },
     });
-    let sliderSec2 = new Swiper('#sliderSec2', {
+     sliderSec2 = new Swiper('#sliderSec2', {
         spaceBetween: 0,
         slidesPerView: 1,
         // slidesPerColumn: 4,
@@ -121,7 +123,7 @@ function slider() {
             nextEl: '#sliderSec2__toRight',
         },
     });
-    let sliderSec3 = new Swiper('#sliderSec3', {
+     sliderSec3 = new Swiper('#sliderSec3', {
         spaceBetween: 0,
         slidesPerView: 1,
         allowTouchMove: true,
@@ -143,7 +145,7 @@ function slider() {
             nextEl: '#sliderSec3__toRight',
         },
     });
-    let sliderBot = new Swiper('#sliderBot', {
+     sliderBot = new Swiper('#sliderBot', {
         spaceBetween: 30,
         slidesPerColumnFill: 'row',
         slidesPerView: 1.3,
@@ -163,7 +165,7 @@ function slider() {
             hide: false,
         },
     });
-    let sliderLarge = new Swiper('#sliderLarge', {
+     sliderLarge = new Swiper('#sliderLarge', {
         spaceBetween: 0,
         slidesPerColumnFill: 'row',
         allowTouchMove: false,
@@ -178,7 +180,7 @@ function slider() {
             nextEl: '.sliderLarge__right',
         },
     });
-    let sliderDouble = new Swiper('#sliderDouble', {
+     sliderDouble = new Swiper('#sliderDouble', {
         spaceBetween: 30,
         slidesPerColumnFill: 'row',
         allowTouchMove: true,
@@ -196,4 +198,7 @@ function slider() {
         },
     });
 }
+
+
+
 document.addEventListener('DOMContentLoaded', slider)

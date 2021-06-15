@@ -25,9 +25,6 @@
 		.slider__topControl {
 			display: none;
 		}
-		&__foxy {
-			margin: 0;
-		}
 	}
 }
 
@@ -38,8 +35,9 @@
 		&__foxy {
 			flex: 0 0 100%;
 			max-width: 100%;
-			margin-top: 100px;
 			order: 0;
+			margin-bottom: 30px;
+			margin-right: 0;
 		}
 	}
 }

@@ -29,6 +29,7 @@
         <item url="file://$PROJECT_DIR$/app/js/localStorage.min.js" />
         <item url="file://$PROJECT_DIR$/app/js/menuToggle.min.js" />
         <item url="file://$PROJECT_DIR$/app/js/ridgepole.min.js" />
+        <item url="file://$PROJECT_DIR$/app/js/sections.min.js" />
         <item url="file://$PROJECT_DIR$/app/js/sliders.min.js" />
         <item url="file://$PROJECT_DIR$/app/js/sticky.min.js" />
         <item url="file://$PROJECT_DIR$/app/js/svg4everybody.min.js" />
@@ -71,7 +72,11 @@
         <item url="file://$PROJECT_DIR$/../../../../../xampp/htdocs/igrader/wp-content/themes/igrader/js/newHeader.min.js" />
         <item url="file://$PROJECT_DIR$/../../../../../xampp/htdocs/igrader/wp-content/themes/igrader/js/validate.min.min.js" />
         <item url="file://$PROJECT_DIR$/../../../../../xampp/htdocs/igrader/wp-content/themes/igraderNew/js/loadMores.min.js" />
+        <item url="file://$PROJECT_DIR$/../../../../../xampp/htdocs/igrader/wp-content/themes/igraderNew/js/menuToggle.min.js" />
         <item url="file://$PROJECT_DIR$/../../../../../xampp/htdocs/igrader/wp-content/themes/igraderNew/js/menuToggle.min.min.js" />
+        <item url="file://$PROJECT_DIR$/../../../../../xampp/htdocs/igrader/wp-content/themes/igraderNew/js/sections.min.js" />
+        <item url="file://$PROJECT_DIR$/../../../../../xampp/htdocs/igrader/wp-content/themes/igraderNew/js/sliders.min.js" />
+        <item url="file://$PROJECT_DIR$/../../../../../xampp/htdocs/igrader/wp-content/themes/igraderNew/js/sliders.min.min.js" />
         <item url="file://$PROJECT_DIR$/../../../../../xampp/htdocs/lesk/wp-content/themes/forest/js/app.min.min.js" />
         <item url="file://$PROJECT_DIR$/../../../../../xampp/htdocs/lesk/wp-content/themes/forest/js/filter.min.js" />
         <item url="file://$PROJECT_DIR$/../../../../../xampp/htdocs/lesk/wp-content/themes/forest/js/foxySticky.min.js" />
@@ -111,6 +116,7 @@
       <root url="file://$PROJECT_DIR$/app/js/localStorage.min.js" />
       <root url="file://$PROJECT_DIR$/app/js/menuToggle.min.js" />
       <root url="file://$PROJECT_DIR$/app/js/ridgepole.min.js" />
+      <root url="file://$PROJECT_DIR$/app/js/sections.min.js" />
       <root url="file://$PROJECT_DIR$/app/js/sliders.min.js" />
       <root url="file://$PROJECT_DIR$/app/js/sticky.min.js" />
       <root url="file://$PROJECT_DIR$/app/js/svg4everybody.min.js" />
@@ -153,7 +159,11 @@
       <root url="file://$PROJECT_DIR$/../../../../../xampp/htdocs/igrader/wp-content/themes/igrader/js/newHeader.min.js" />
       <root url="file://$PROJECT_DIR$/../../../../../xampp/htdocs/igrader/wp-content/themes/igrader/js/validate.min.min.js" />
       <root url="file://$PROJECT_DIR$/../../../../../xampp/htdocs/igrader/wp-content/themes/igraderNew/js/loadMores.min.js" />
+      <root url="file://$PROJECT_DIR$/../../../../../xampp/htdocs/igrader/wp-content/themes/igraderNew/js/menuToggle.min.js" />
       <root url="file://$PROJECT_DIR$/../../../../../xampp/htdocs/igrader/wp-content/themes/igraderNew/js/menuToggle.min.min.js" />
+      <root url="file://$PROJECT_DIR$/../../../../../xampp/htdocs/igrader/wp-content/themes/igraderNew/js/sections.min.js" />
+      <root url="file://$PROJECT_DIR$/../../../../../xampp/htdocs/igrader/wp-content/themes/igraderNew/js/sliders.min.js" />
+      <root url="file://$PROJECT_DIR$/../../../../../xampp/htdocs/igrader/wp-content/themes/igraderNew/js/sliders.min.min.js" />
       <root url="file://$PROJECT_DIR$/../../../../../xampp/htdocs/lesk/wp-content/themes/forest/js/app.min.min.js" />
       <root url="file://$PROJECT_DIR$/../../../../../xampp/htdocs/lesk/wp-content/themes/forest/js/filter.min.js" />
       <root url="file://$PROJECT_DIR$/../../../../../xampp/htdocs/lesk/wp-content/themes/forest/js/foxySticky.min.js" />

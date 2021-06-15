@@ -57,11 +57,20 @@
 	display: inline-flex;
 	align-items: center;
 	border: 1px solid #768B9C;
-	padding: 9px 25px;
-	&:before {
+	padding: 12px 25px;
+	font-size: 12px;
+	line-height: 150%;
+	transition: all .2s;
+	svg {
 		height: 22px;
-		content: url('svg/assets/download.svg');
+		width: 22px;
 		margin-right: 5px;
+	}
+
+	&:hover {
+		border: 1px solid #f8f8f8;
+		color: #f8f8f8;
+		background-color: #27343F;
 	}
 }
 

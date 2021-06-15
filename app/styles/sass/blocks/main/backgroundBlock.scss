@@ -1,14 +1,12 @@
 .backgroundBlock {
-	> div:first-child {
-		display: grid;
-		grid-template:
-		"one one one one two two foxy foxy" minmax(100px, 265px)
-		"three three three four four four foxy foxy" minmax(100px, 220px)
-		/1fr 1fr 1fr 1fr 1fr 1fr 135px 150px
-		;
-		align-items: stretch;
-		gap: 15px;
-	}
+	display: grid;
+	grid-template:
+	"one one one one two two foxy foxy" minmax(100px, 265px)
+	"three three three four four four foxy foxy" minmax(100px, 220px)
+	;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 135px 150px;
+	align-items: stretch;
+	gap: 15px;
 	
 	&__spec:nth-child(1) {
 		grid-area: one;
@@ -59,15 +57,6 @@
 			height: 100%;
 			z-index: 2;
 		}
-		//&:nth-child(1) {
-		//	.views {
-		//		margin-left: auto;
-		//	}
-		//}
-		&:nth-child(2) {
-
-		}
-
 		&Text {
 			padding: 4% 60px 4% 30px;
 			height: 100%;
@@ -104,8 +93,9 @@
 	}
 }
 
-.backgroundBlockMiddle {
+.backgroundBlock.backgroundBlockMiddle {
 	display: grid;
+	grid-template: unset;
 	grid-template-columns: repeat(2, 1fr);
 	grid-template-rows: repeat(3, minmax(150px, 250px));
 	gap: 5px;
@@ -119,9 +109,8 @@
 
 @media (max-width: 1919px) {
 	.backgroundBlock {
-		>div:first-child {
-			grid-template-columns: repeat(8, 1fr)
-		}
+		grid-template-columns: repeat(8, 1fr);
+
 		&__blockTextInnerMain {
 			font-size: .8vw;
 		}
@@ -132,16 +121,27 @@
 	}
 }
 
-@media (max-width: 1279px) {
+@media (max-width: 1600px) {
 	.backgroundBlock {
-		>div:first-child {
-			grid-template-columns: 1fr 1fr 1fr 1fr 1fr 2fr 1fr 150px
-		}
 		&__blockText {
-			padding-right: 3%;
+			padding: 4%;
 		}
 		&__blockTextInnerMain {
-			font-size: 1.1vw;
+			font-size: 14px;
+		}
+		&__blockTextInnerTitle {
+			font-size: 16px;
+			line-height: 150%;
+		}
+	}
+}
+
+@media (max-width: 1279px) {
+	.backgroundBlock {
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr 2fr 1fr 150px;
+
+		&__blockText {
+			padding-right: 3%;
 		}
 	}
 }
@@ -149,7 +149,6 @@
 
 @media (max-width: 1023px) {
 	.backgroundBlock {
-		> div:first-child {
 			gap: 10px;
 			grid-template:
 			"one one one one" minmax(100px, 265px)
@@ -158,7 +157,7 @@
 			"four four four four" minmax(100px, 265px)
 			/1fr 1fr 1fr 1.5fr
 		;
-		}
+
 		&__spec:nth-child(2) {
 			grid-area: two;
 			.backgroundBlock__blockText {
@@ -182,6 +181,10 @@
 					&Main {
 						font-size: 12px;
 						padding-bottom: 20px;
+					}
+					&Title {
+						font-size: 18px;
+						line-height: 150%;
 					}
 				}
 			}
@@ -208,7 +211,7 @@
 @media (max-width: 575px) {
 	.container.top {
 		.backgroundBlock {
-			> div:first-child {
+
 				gap: 20px;
 				grid-template:
 			"one"
@@ -218,7 +221,7 @@
 			"four"
 			/1fr
 			;
-			}
+
 			&__spec:nth-child(2) {
 				grid-area: two;
 				.backgroundBlock__blockText {
@@ -293,6 +296,10 @@
 	.backgroundBlock {
 		&__blockTextInnerTitle {
 			font-size: 16px;
+		}
+		&.backgroundBlockMiddle {
+			grid-template-columns: 1fr;
+			grid-template-rows: minmax(150px, 250px);
 		}
 	}
 }

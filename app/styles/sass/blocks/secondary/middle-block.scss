@@ -1,6 +1,6 @@
 .middle-block {
 	margin-top: 80px;
-	grid-template-columns: minmax(400px,913px) minmax(200px,750px);
+	grid-template-columns: minmax(400px,700px) minmax(200px,900px);
 	justify-content: flex-end;
 	.newMag {
 		position: relative;
@@ -54,9 +54,9 @@
 	.middle-block {
 		.backgroundBlock {
 			grid-template-columns: 1fr;
-			grid-template-rows: repeat(3,200px);
-			> a:nth-child(n+4) {
-				display: none;
+			grid-template-rows: unset;
+			&__spec {
+				min-height: 200px;
 			}
 		}
 	}

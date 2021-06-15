@@ -8,6 +8,10 @@
 		> div:first-child {
 			flex-grow: 1;
 			display: flex;
+			&.loading {
+				opacity: .5;
+				pointer-events: none;
+			}
 		}
 	}
 
@@ -82,9 +86,6 @@
 			margin-bottom: 30px;
 			&Hidden {
 				grid-template-columns: repeat(2, 1fr);
-				> a:nth-child(n+5) {
-					display: none;
-				}
 			}
 		}
 	}
@@ -106,10 +107,6 @@
 		&__blocks {
 			&Hidden {
 				height: unset;
-
-				> a:nth-child(n+5) {
-					display: none;
-				}
 			}
 		}
 	}

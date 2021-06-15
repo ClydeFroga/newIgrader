@@ -5,6 +5,7 @@ let containerWidth = container.clientWidth
 let containerWidthAfter = null
 let asideMenuWidth = asideMenu.clientWidth
 
+
 function menuToggle() {
 
   width = document.documentElement.clientWidth;
@@ -30,14 +31,14 @@ function menuToggle() {
           gsap.to(".wrapper__block", {marginLeft: 0, duration: 0.3})
         } else {
           gsap.to(container, {x: asideMenuWidth / 2, duration: 0.3})
-          // }
         }
       }
     
       gsap.to(asideMenu, {display: 'block', right: 0, duration: 0.3,  ease: "power1.out"})
-  
-  
+      
       sessionStorage.removeItem('menuCollapsed')
+  
+      sliderLarge.update()
     }
     else {
       //Сворот
@@ -47,13 +48,14 @@ function menuToggle() {
       if(containerWidth < 1310) {
         gsap.to(".wrapper__block", {marginLeft: -asideMenuWidth, duration: 0.3})
       } else {
-        console.log(container)
         gsap.to(container, {x: -asideMenuWidth / 2, duration: 0.3})
       }
       
       setTimeout(() => {
         containerWidthAfter = container.clientWidth
         menu.classList.toggle('leftDestroy')
+        
+        sliderLarge.update()
       }, 400)
   
       sessionStorage.setItem('menuCollapsed', 'true')
