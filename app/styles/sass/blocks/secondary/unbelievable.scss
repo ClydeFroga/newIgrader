@@ -6,12 +6,14 @@
 		border: 1px solid #768B9C;
 		padding: 20px;
 		margin-right: 25px;
+		height: max-content;
 		.largeTitle {
 			flex-grow: 1;
 		}
 		.imgBlock {
 			flex: 0 0 44%;
 			margin: 0 35px;
+			padding-top: 33.6%;
 		}
 		&Text {
 			flex: 0 0 25%;

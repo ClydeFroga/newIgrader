@@ -56,9 +56,12 @@
 				grid-column-start: 1;
 				grid-column-end: 5;
 			}
-			span {
+			span, a {
 				font-size: 12px;
 				color: #f8f8f8;
+			}
+			a {
+				border-bottom: 1px dashed #f8f8f8;
 			}
 		}
 	}
@@ -111,8 +114,11 @@
 		.contactForm__left span {
 			color: #3B5266;
 		}
-		span {
+		span, a {
 			color: #768B9C;
+		}
+		a {
+			border-bottom: 1px dashed #768B9C;
 		}
 		input:not([type="submit"]):not([type="checkbox"]) {
 			color: #768B9C;

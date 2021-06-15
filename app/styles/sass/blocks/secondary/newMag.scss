@@ -6,6 +6,14 @@
 	padding: 5% 11%;
 	align-items: flex-start;
 	display: grid;
+	&.test1 {
+		background-image: url("img/magBack1.jpg");
+		background-repeat: repeat;
+		background-size: 20%;
+	}
+	&.test2 {
+		background-image: url("img/magBack2.jpg");
+	}
 	.largeTitle {
 		color: #f8f8f8;
 		margin-bottom: 40px;
@@ -91,7 +99,13 @@
 }
 
 @media (max-width: 1023px) {
+	.subscribe {
+		&:before {
+			margin-top: 0;
+		}
+	}
 	.newMag {
+		padding: 5%;
 		margin-top: 40px;
 		grid-template-columns: 1fr 34.5%;
 		grid-template-rows: unset;
@@ -105,18 +119,25 @@
 		}
 		div {
 			align-self: flex-end;
+			a, span {
+				margin: 0;
+				padding: 10px 20px;
+			}
+		}
+
+		.subscribe, .readOnline, .download, a {
+			font-size: 12px;
 		}
 	}
-	.subscribe, .readOnline, .download {
-		font-size: 12px;
-	}
+
+
 	
 }
 
 @media (max-width: 767px) {
 	.newMag {
 		grid-template-columns: 1fr;
-		
+
 		img {
 			justify-self: center;
 			grid-row-start: 3;
