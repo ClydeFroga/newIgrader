@@ -62,7 +62,7 @@
 	}
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 1279px) {
 	.sectionSelect {
 		> div {
 			flex-wrap: wrap;
@@ -70,6 +70,7 @@
 				display: flex;
 				flex: 0 0 100%;
 				max-width: 100%;
+				justify-content: space-between;
 				.foxy {
 					margin-left: 10px;
 					order: 2;

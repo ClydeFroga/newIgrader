@@ -64,9 +64,9 @@
 @media (max-width: 1520px) {
 	.catalog {
 		>div {
-			grid-template-columns: repeat(3, 1fr);
+			grid-template-columns: repeat(2, 1fr);
 			.fullWidthButton {
-				grid-column-end: 4;
+				grid-column-end: 3;
 			}
 		}
 
@@ -76,9 +76,9 @@
 @media (max-width: 1023px) {
 	.catalog {
 		>div {
-			grid-template-columns: repeat(2, 1fr);
+			//grid-template-columns: repeat(2, 1fr);
 			.fullWidthButton {
-				grid-column-end: 3;
+				//grid-column-end: 3;
 			}
 		}
 
