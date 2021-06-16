@@ -13,6 +13,8 @@
 		flex-direction: column;
 		border: 1px solid #F8F8F8;
 		background-color: #F8F8F8;
+		flex-basis: 0;
+		flex-grow: 1;
 		.imgBlock {
 			padding-top: 75%;
 		}

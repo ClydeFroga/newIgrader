@@ -75,20 +75,27 @@
 @media (max-width: 1023px) {
 	.tripleBlock {
 		grid-template-columns: 1fr;
-		
+		row-gap: 0;
 		&__second {
+			margin-top: 25px;
 			.largeTitle {
 				margin-bottom: 30px;
 			}
 			.horizontalBar {
 				flex-direction: row;
 				flex-wrap: wrap;
+				
 				&__blc {
 					flex: 0 0 45%;
-					&RightTitle {
-						margin-bottom: 25px;
-						font-weight: normal;
+					
+					&Right {
+						//align-self: flex-start;
+						&Title {
+							margin-bottom: 10px;
+							font-weight: normal;
+						}
 					}
+					
 					&:not(:last-child) {
 						margin-bottom: 30px;
 					}

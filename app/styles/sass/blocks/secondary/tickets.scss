@@ -1,8 +1,12 @@
 .tickets {
 	> div {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+		grid-template-columns: repeat(4, minmax(150px, 1fr));
 		gap: 30px;
+		.fullWidthButton {
+			grid-column-start: 1;
+			grid-column-end: 5;
+		}
 	}
 	.largeTitle {
 		margin-bottom: 30px;
@@ -94,6 +98,9 @@
 		>div {
 			grid-template-columns: repeat(2, 1fr);
 			gap: 20px;
+			.fullWidthButton {
+				grid-column-end: 3;
+			}
 		}
 		&.events {
 			> div {
@@ -118,15 +125,12 @@
 @media (max-width: 767px) {
 	.tickets {
 		> div {
-			display: grid;
-			grid-template-columns: 1fr 1fr;
 			gap: 10px;
 		}
 		&__block {
 			&Bot {
 				padding: 0 15px 15px 15px;
 			}
-
 			
 			.buttonBlack, &BotText {
 				display: none;
@@ -136,6 +140,7 @@
 				font-size: 16px;
 			}
 			&BotTitle {
+				font-weight: normal;
 				font-size: 12px;
 			}
 		}

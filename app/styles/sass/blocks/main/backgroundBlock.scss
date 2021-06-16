@@ -90,6 +90,9 @@
 	}
 	.foxyA {
 		grid-area: foxy;
+		a {
+			background-position-y: top !important;
+		}
 	}
 }
 

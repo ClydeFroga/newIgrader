@@ -52,6 +52,11 @@
       display: inline-flex;
       margin-right: 10px;
     }
+    &.light {
+      &:before {
+        background: url("svg/assets/cityLight.svg");
+      }
+    }
   }
 
   .views {
