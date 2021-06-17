@@ -57,11 +57,15 @@
 	}
 }
 .rubricDesc {
-	font-size: 16px;
-	line-height: 150%;
-	color: #27343F;
-	margin-bottom: 15px;
-	display: block;
+	p {
+		font-size: 16px;
+		line-height: 150%;
+		color: #27343F;
+		margin-bottom: 15px;
+		//display: block;
+		margin-top: 0;
+	}
+
 }
 .journalTitle {
 	font-weight: bold;
