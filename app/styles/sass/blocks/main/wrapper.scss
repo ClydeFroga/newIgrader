@@ -41,9 +41,15 @@
 	}
 	
 	&__block {
+		position: relative;
 		grid-area: content;
 		& > div:last-child {
 			margin-bottom: 70px;
+		}
+		&:after {
+			content: '';
+			transition: all .5s;
+			z-index: 5;
 		}
 	}
 	

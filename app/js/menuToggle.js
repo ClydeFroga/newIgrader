@@ -66,17 +66,18 @@ document.addEventListener('DOMContentLoaded', () => {
         sessionStorage.setItem('menuCollapsed', 'true')
       }
     } else {
+      asideMenu.classList.toggle('open')
       gsap.to(asideMenu, {display: 'block', left: 0, duration: 0.3})
-      
-      setTimeout(() => asideMenu.classList.toggle('open'), 400)
+
     }
   }
   
   let togglers = document.querySelectorAll('#openMenu')
   
   document.querySelector('.asideMenu__close').addEventListener('click', () => {
+    asideMenu.classList.toggle('open')
     gsap.to(asideMenu, {display: 'none', left: -270, duration: 0.3})
-    setTimeout(() => asideMenu.classList.toggle('open'), 400)
+    // setTimeout(() => asideMenu.classList.toggle('open'), 400)
   })
   
   for (let item of togglers) {
