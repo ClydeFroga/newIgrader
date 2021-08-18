@@ -13,6 +13,9 @@
 				pointer-events: none;
 			}
 		}
+		> div:nth-child(2) {
+			min-width: 300px;
+		}
 	}
 
 	&__sections {
@@ -56,6 +59,7 @@
 			> div:nth-child(2) {
 				flex: 0 0 30%;
 				max-width: 30%;
+				min-width: unset;
 			}
 		}
 

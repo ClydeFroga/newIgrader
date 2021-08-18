@@ -20,15 +20,17 @@
 				line-height: 28px;
 				font-weight: 600;
 				color: $color1;
+				transition: color .2s;
 			}
 			&Text {
+				transition: color .2s;
 				font-size: 16px;
 				line-height: 150%;
 				color: #27343F;
 			}
 		}
 		&.special {
-			padding: 35px 40px;
+			padding: 35px 40px !important;
 			background: #768B9C;
 			.horizontalBar__blc {
 				&Left {
@@ -36,16 +38,35 @@
 					flex: 0 0 29%;
 				}
 				&Right {
-					&Title, .date, &Text, .views  {
+					&Title, &Text  {
 						color: #f8f8f8;
-					}
-					.views:before {
-						background: url("svg/assets/views.svg");
 					}
 				}
 			}
-
+			.date, .views {
+				color: #f8f8f8;
+			}
+			.views {
+				div:before {
+					background: url("svg/assets/views.svg");
+				}
+			}
 		}
+
+	}
+	&.effectInclude {
+		.horizontalBar__blc {
+			&:hover {
+				.horizontalBar__blcRight {
+					&Text, &Title {
+						color: #ff8b00;
+					}
+				}
+				
+
+			}
+		}
+
 	}
 	&.smallText {
 		.horizontalBar__blc {
@@ -128,8 +149,10 @@
 	}
 	&.events {
 		.horizontalBar__blc {
+			flex-wrap: nowrap;
 			background-color: #f8f8f8;
 			padding: 42px 30px;
+			height: max-content;
 			&Right {
 				.dateAndViews {
 					align-items: center;
@@ -213,7 +236,9 @@
 @media (max-width: 767px) {
 	.horizontalBar {
 		&__blc {
+			flex-wrap: wrap;
 			&Right {
+				flex: 0 0 60%;
 				&Title {
 					font-size: 12px;
 					line-height: 150%;
@@ -223,9 +248,11 @@
 					line-height: 150%;
 				}
 			}
-			
+			&Left {
+				margin-right: 15px;
+			}
 			&.special {
-				padding: 15px;
+				padding: 15px !important;
 				.horizontalBar__blc {
 					&Left {
 						padding-top: 24.6%;
@@ -233,6 +260,10 @@
 					}
 				}
 				
+			}
+			& > .dateAndViews {
+				margin-top: 15px;
+				flex: 0 0 100%;
 			}
 		}
 		&.events {

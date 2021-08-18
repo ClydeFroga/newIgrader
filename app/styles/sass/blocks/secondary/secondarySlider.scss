@@ -1,5 +1,5 @@
 .secondarySlider {
-	margin-top: 40px;
+	//margin-top: 40px;
 	display: flex;
 	&__foxy {
 		margin-right: 25px;
@@ -24,6 +24,14 @@
 	.secondarySlider {
 		.slider__topControl {
 			display: none;
+		}
+		div + &__foxy {
+			margin-top: 25px;
+		}
+		&__foxy {
+			+ div {
+				margin-top: 25px;
+			}
 		}
 	}
 }

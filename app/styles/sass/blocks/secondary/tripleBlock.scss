@@ -2,6 +2,9 @@
 	margin-top: 40px;
 	display: grid;
 	grid-template-columns: 1fr 1px 1fr 250px;
+	> div {
+		min-width: 0;
+	}
 	&.withFoxyB {
 		grid-template-columns: 1fr 1px 1fr 300px;
 	}
@@ -35,8 +38,8 @@
 				}
 				&Right {
 					&Title {
-						font-size: 16px;
-						line-height: 150%;
+						font-size: 16px !important;
+						line-height: 150% !important;
 					}
 					&Text {
 					
@@ -159,6 +162,7 @@
 
 @media (max-width: 767px) {
 	.tripleBlock {
+		row-gap: 30px;
 		&__second {
 			.largeTitle {
 				margin-bottom: 30px;

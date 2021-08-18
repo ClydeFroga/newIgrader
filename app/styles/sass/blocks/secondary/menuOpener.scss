@@ -1,0 +1,35 @@
+.menuOpener {
+	display: none;
+	opacity: 0;
+	//display: flex;
+	flex-direction: column;
+	align-items: center;
+	cursor: pointer;
+	position: fixed;
+	top: 0;
+	left: 0;
+	//border-radius: 50%;
+	z-index: 3;
+	width: 42px;
+	height: 42px;
+	color: white;
+	background-color: white;
+	box-shadow: 0 0 5px 0 rgba(34, 60, 80, 0.2);
+	transition: opacity .2s, left .3s;
+	svg {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		padding: 12px;
+		//width: 30px;
+		//height: 25px;
+		margin: auto;
+	}
+	&:hover {
+		opacity: 1 !important;
+	}
+}
+
+.forOpener ~ .menuOpener {
+	left: 40px + 270px;
+}

@@ -1,42 +1,37 @@
 .newMag {
-	background-image: url("img/magBack.png");
-	background-repeat: no-repeat;
-	background-size: cover;
+	background-image: url("img/magBack1.jpg");
+	background-repeat: repeat;
+	background-size: 20%;
 	grid-template-rows: min-content min-content min-content;
 	padding: 5% 11%;
 	align-items: flex-start;
 	display: grid;
-	&.test1 {
-		background-image: url("img/magBack1.jpg");
-		background-repeat: repeat;
-		background-size: 20%;
-	}
-	&.test2 {
-		background-image: url("img/magBack2.jpg");
-	}
 	.largeTitle {
 		color: #f8f8f8;
 		margin-bottom: 40px;
 	}
 	img {
 		border: 8px solid white;
-		width: 61%;
+		width: 100%;
 		margin-bottom: 80px;
 	}
 	div {
 		display: flex;
 		justify-content: space-between;
-		margin-right: 10%;
 		align-items: center;
+		flex-wrap: wrap;
+		a, span {
+			cursor: pointer;
+			display: inline-flex;
+			color: #f8f8f8;
+			margin-top: 20px;
+		}
 	}
-	a, span {
-		cursor: pointer;
-		display: inline-flex;
-		color: #f8f8f8;
-	}
+
 }
 
 .subscribe {
+	cursor: pointer;
 	&:before {
 		content: url('svg/assets/subscribe.svg');
 		margin-top: 3px;
@@ -82,22 +77,6 @@
 	}
 }
 
-
-@media (max-width: 1520px) {
-	.newMag {
-		div {
-			flex-wrap: wrap;
-			margin-right: 0;
-		}
-		a, span {
-			margin-top: 20px;
-		}
-		img {
-			width: unset;
-		}
-	}
-}
-
 @media (max-width: 1023px) {
 	.subscribe {
 		&:before {
@@ -107,45 +86,36 @@
 	.newMag {
 		padding: 5%;
 		margin-top: 40px;
-		grid-template-columns: 1fr 34.5%;
-		grid-template-rows: unset;
 		gap: 20px;
-		img {
-			grid-row-start: 1;
-			grid-row-end: 3;
-			grid-column-start: 2;
-			grid-column-end: 3;
-			margin-bottom: 0;
-		}
-		div {
-			align-self: flex-end;
-			a, span {
-				margin: 0;
-				padding: 10px 20px;
-			}
-		}
-
+		
 		.subscribe, .readOnline, .download, a {
 			font-size: 12px;
 		}
 	}
-
-
-	
 }
 
-@media (max-width: 767px) {
+@media (max-width: 860px) {
 	.newMag {
 		grid-template-columns: 1fr;
-
+		max-width: 70%;
+		margin: auto;
+		.largeTitle {
+			margin-bottom: 0;
+		}
 		img {
 			justify-self: center;
 			grid-row-start: 3;
 			grid-row-end: 4;
 			grid-column-start: unset;
 			grid-column-end: unset;
-
+			margin-bottom: 0;
 		}
 
+	}
+}
+
+@media (max-width: 576px) {
+	.newMag {
+		max-width: unset;
 	}
 }

@@ -60,17 +60,18 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   headerContainer()
   
-  
   function menu() {
-    function subMenu(menu, parent) {
-      parent.classList.toggle('open')
-      menu.classList.toggle('expanded')
+    function subMenu(e) {
+      let menu = e.target.parentElement;
+      let submenu = menu.querySelector('.sub-menu');
+      menu.classList.toggle('open')
+      if(menu != null) submenu.classList.toggle('expanded')
     }
   
-    let subMenus = document.querySelectorAll('.sub-menu')
+    let subMenus = document.querySelectorAll('.menu-item-has-children > a')
     if(subMenus.length > 0) {
       for(let item of subMenus) {
-        item.parentNode.addEventListener('click', () => subMenu(item, item.parentNode) )
+        item.parentNode.addEventListener('click', subMenu)
       }
     }
   }
@@ -172,4 +173,38 @@ document.addEventListener('DOMContentLoaded', () => {
       cc.setVals()
     }
   }
+  
+  class menuOpener {
+    constructor(wrapper) {
+      this.menuOpener = ''
+      this.wrapper = wrapper
+    }
+    on() {
+      gsap.to(this.menuOpener, {display: 'flex', opacity: 0.8})
+      this.menuOpener.classList.add('visible')
+    }
+    off() {
+      gsap.to(this.menuOpener, {display: 'none', opacity: 0})
+      this.menuOpener.classList.remove('visible')
+    }
+    getBut() {
+      this.menuOpener = document.querySelector('.menuOpener')
+      document.addEventListener('scroll', this.onScroll.bind(this))
+      this.menuOpener.addEventListener('click', this.off.bind(this))
+    }
+    onScroll() {
+      if(pageYOffset > 500) {
+        if(!this.menuOpener.classList.contains('visible') && this.wrapper.classList.contains('leftDestroy')) {
+          this.on()
+        }
+      }
+      else if(pageYOffset < 400) {
+        if(this.menuOpener.classList.contains('visible')) {
+          this.off()
+        }
+      }
+    }
+  }
+  
+  new menuOpener(document.querySelector('.wrapper')).getBut()
 })

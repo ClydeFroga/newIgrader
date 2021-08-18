@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
   let asideMenuWidth = asideMenu.clientWidth
   
   function menuToggle() {
-    
     width = document.documentElement.clientWidth;
     if (width > 1023) {
       asideMenuWidth = asideMenu.clientWidth
@@ -17,6 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
         //Разворот
         
         menu.classList.toggle('leftDestroy')
+        
+        menu.classList.add('forOpener')
         
         if (menu.classList.contains('first')) {
           menu.classList.remove('first')
@@ -43,7 +44,8 @@ document.addEventListener('DOMContentLoaded', () => {
         sessionStorage.removeItem('menuCollapsed')
         
         sliderLarge.update()
-      } else {
+      }
+      else {
         //Сворот
         gsap.to(asideMenu, {right: '100%', duration: 0.2})
         
@@ -55,6 +57,8 @@ document.addEventListener('DOMContentLoaded', () => {
             gsap.to(container, {x: -asideMenuWidth / 2, duration: 0.3})
           }
         }
+  
+        menu.classList.remove('forOpener')
         
         setTimeout(() => {
           containerWidthAfter = containers[0].clientWidth

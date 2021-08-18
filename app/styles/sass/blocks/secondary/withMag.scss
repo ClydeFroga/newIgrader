@@ -1,0 +1,15 @@
+.withMag {
+	display: grid;
+	grid-template-columns: minmax(400px,700px) minmax(200px,900px);
+	gap: 25px;
+	.orangeTitle {
+		margin-top: 40px;
+		margin-bottom: 25px;
+	}
+}
+
+@media (max-width: 860px) {
+	.withMag {
+		grid-template-columns: 1fr;
+	}
+}

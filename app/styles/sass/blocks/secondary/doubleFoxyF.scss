@@ -48,6 +48,10 @@
 				margin-top: 0;
 			}
 		}
+		.backgroundBlockMiddle {
+			grid-template-columns: repeat(2,1fr);
+			grid-template-rows: repeat(3, minmax(150px, 250px));
+		}
 		.different {
 			.backgroundBlockMiddle {
 				grid-template-columns: repeat(3,1fr);

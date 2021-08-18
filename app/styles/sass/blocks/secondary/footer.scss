@@ -72,7 +72,7 @@
 		margin-top: 40px;
 		display: flex;
 		justify-content: space-between;
-		ul {
+		 > ul {
 			margin: 0 20px 0 0;
 			flex: 0 0 90%;
 			display: grid;
@@ -192,6 +192,7 @@
 			}
 		}
 		&__two {
+			max-height: max-content;
 			ul {
 				row-gap: 20px;
 				grid-template-rows: unset;

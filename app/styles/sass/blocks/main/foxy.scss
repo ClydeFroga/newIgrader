@@ -17,7 +17,9 @@
   top: 25px;
 }
 
-
+.foxyA a {
+  background-position-y: top !important;
+}
 
 @media (max-width: 1279px) {
   .foxyLong {
@@ -51,8 +53,7 @@
 @media (max-width: 767px) {
   .foxyFBlock {
     flex-direction: column;
-    
-    
+  
     .foxyF {
       display: block;
       flex: unset;
@@ -62,6 +63,9 @@
         margin: auto;
       }
     }
+  }
+  .foxyFull {
+    margin: 0;
   }
   .foxy {
     justify-content: center;

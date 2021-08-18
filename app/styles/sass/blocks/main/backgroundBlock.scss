@@ -56,6 +56,10 @@
 			width: 100%;
 			height: 100%;
 			z-index: 2;
+			transition: background .4s;
+		}
+		&:hover:before {
+			background: rgba(39, 52, 63, 0.8);
 		}
 		&Text {
 			padding: 4% 60px 4% 30px;
@@ -106,6 +110,9 @@
 		grid-area: unset !important;
 		.backgroundBlock__blockText {
 			justify-content: flex-end;
+			&InnerTitle {
+				margin-top: auto;
+			}
 		}
 	}
 }
@@ -211,7 +218,7 @@
 	}
 }
 
-@media (max-width: 575px) {
+@media (max-width: 576px) {
 	.container.top {
 		.backgroundBlock {
 
@@ -302,7 +309,10 @@
 		}
 		&.backgroundBlockMiddle {
 			grid-template-columns: 1fr;
-			grid-template-rows: minmax(150px, 250px);
+			grid-template-rows: unset;
+			.backgroundBlock__spec {
+				min-height: 250px;
+			}
 		}
 	}
 }

@@ -1,6 +1,9 @@
 .sliderTop {
 	margin-top: 15px;
 	display: flex;
+	> div:nth-child(2) {
+		min-width: 300px;
+	}
 	.slider {
 		margin-right: 15px;
 	}
@@ -34,6 +37,7 @@
 			width: auto;
 			flex: 0 0 30%;
 			max-width: 30%;
+			min-width: unset;
 		}
 		.foxy {
 

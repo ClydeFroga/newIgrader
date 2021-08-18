@@ -22,10 +22,10 @@
 	}
 	&.dedicated {
 		.wrongBlock__blc {
-			padding-left: 8px;
-			padding-top: 8px;
+			padding: 8px;
 			background-color: rgba(#768B9C,0.1);
 			&Title {
+				margin-top: 0;
 				font-weight: bold;
 			}
 		}

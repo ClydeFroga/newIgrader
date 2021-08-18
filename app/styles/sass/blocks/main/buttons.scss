@@ -107,6 +107,15 @@
 	
 }
 
+.rubric, .newsPage {
+	.buttonBlack {
+		display: block;
+		margin-top: 15px;
+		max-width: 100%;
+		text-align: center;
+	}
+}
+
 .buttonBlack {
 	cursor: pointer;
 	color: #F8F8F8;

@@ -51,12 +51,14 @@
 	font-size: 31px;
 	line-height: 41px;
 	color: #27343F;
+	margin: 0;
 	&.margin {
 		display: block;
 		margin-bottom: 25px;
 	}
 }
 .rubricDesc {
+	display: block;
 	p {
 		font-size: 16px;
 		line-height: 150%;

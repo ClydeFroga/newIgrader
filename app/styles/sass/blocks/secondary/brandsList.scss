@@ -53,6 +53,7 @@
 			&Links {
 				display: flex;
 				flex-direction: column;
+				padding-bottom: 0;
 				p {
 					font-weight: bold;
 					font-size: 16px;
@@ -63,19 +64,32 @@
 					transition: all .2s;
 				}
 			}
+			.hiddenButton {
+				margin: 0 30px 30px 30px;
+			}
 			&Hidden {
 				transition: all .2s;
 				display: block;
 				position: absolute;
-				font-weight: bold;
-				font-size: 16px;
-				line-height: 150%;
-				color: #fafafa;
+				
 				opacity: 0;
 				margin: auto;
 				padding: 0 30px;
-				top: 40%;
-				text-decoration: underline;
+				top: 25%;
+				
+				span {
+					color: #fafafa;
+				}
+				
+				.dateAndViews {
+					margin-bottom: 10px;
+				}
+				 > span {
+					 text-decoration: underline;
+					 font-weight: bold;
+					 font-size: 16px;
+					 line-height: 150%;
+				}
 			}
 			&:hover {
 				background-color: #3B5266;
@@ -87,15 +101,16 @@
 				img {
 					opacity: 0;
 				}
+				.hiddenButton {
+					background-color: #F89B00;
+					border-color: #F89B00;
+				}
 				.brandsList__block {
 					&Links {
 						p, span {
 							color: #fafafa;
 						}
-						.hiddenButton {
-							background-color: #F89B00;
-							border-color: #F89B00;
-						}
+
 					}
 					&Hidden {
 						opacity: 1;

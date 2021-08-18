@@ -18,9 +18,10 @@
 		.textModule:nth-child(2) {
 			margin-right: 0;
 			padding-right: 0;
-			border-right: none;
+			border: none;
 		}
 		.secondaryText__foxy {
+			order: 3;
 			margin-left: 25px;
 			margin-right: 0;
 		}
@@ -68,7 +69,10 @@
 			border-bottom: 1px solid rgba(118, 139, 156, 0.5);
 		}
 		&.reverse {
-			grid-template-columns: 30% 1fr ;
+			grid-template-columns: 30% 1fr;
+			.secondaryText__foxy {
+				order: 1;
+			}
 		}
 		&.foxySecond {
 			grid-template-columns: 1fr 30%;

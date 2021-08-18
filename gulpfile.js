@@ -99,6 +99,18 @@ function stylesSec() {
 		.pipe(browserSync.stream())
 }
 
+// function stylesQuiz() {
+// 	return src([`app/styles/${preprocessor}/quiz.scss`])
+// 		.pipe(eval(`${preprocessor}glob`)())
+// 		.pipe(eval(preprocessor)())
+// 		.pipe(autoprefixer())
+// 		.pipe(cleancss({ level: { 1: { specialComments: 0 } },/* format: 'beautify' */ }))
+// 		.pipe(rename('quiz.css'))
+// 		.pipe(dest('app/css'))
+// 		.pipe(dest("C:\\xampp\\htdocs\\igrader\\wp-content\\themes\\igraderNew\\styles"))
+// 		.pipe(browserSync.stream())
+// }
+
 function images() {
 	return src(['app/images/src/**/*'])
 		.pipe(newer('app/images/dist'))
@@ -147,6 +159,7 @@ function startwatch() {
 	watch('app/css/svg/assets/*', { usePolling: true }, svg)
 	watch(`app/styles/${preprocessor}/blocks/main/**/*`, { usePolling: true }, stylesMain)
 	watch(`app/styles/${preprocessor}/blocks/secondary/**/*`, { usePolling: true }, stylesSec)
+	// watch(`app/styles/${preprocessor}/quiz.scss`, { usePolling: true }, stylesQuiz)
 	watch(['app/js/**/*.js', '!app/js/**/*.min.js'], { usePolling: true }, scripts)
 	watch('app/images/src/**/*.{jpg,jpeg,png,webp,svg,gif}', { usePolling: true }, images)
 	watch(`app/**/*.{${fileswatch}}`, { usePolling: true }).on('change', browserSync.reload)
@@ -155,8 +168,10 @@ function startwatch() {
 exports.scripts = scripts
 exports.stylesMain  = stylesMain
 exports.stylesSec  = stylesSec
+// exports.stylesQuiz  = stylesQuiz
 exports.images  = images
 exports.deploy  = deploy
 exports.assets  = series(scripts, stylesMain, images)
 exports.build   = series(cleandist, scripts, stylesMain, images, buildcopy, buildhtml)
+// exports.default = series(svg, scripts, stylesMain, stylesSec, stylesQuiz, images, parallel(browsersync, startwatch))
 exports.default = series(svg, scripts, stylesMain, stylesSec, images, parallel(browsersync, startwatch))

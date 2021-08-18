@@ -100,6 +100,7 @@
 		}
 		.verticalBlock__bot {
 			&Block {
+				height: max-content;
 				display: block;
 				padding: 15px;
 				transition: background-color .2s;
@@ -161,6 +162,7 @@
 				grid-column-end: 4;
 			}
 			&Block {
+				height: max-content;
 				transition: all .2s;
 				.imgBlock {
 					margin: 0;
@@ -280,7 +282,10 @@
 		}
 		&__bot {
 			&.special {
-				background-color: unset;
+				//background-color: unset;
+				.imgBlock {
+					padding-top: 70%;
+				}
 			}
 		}
 		&.inThree {

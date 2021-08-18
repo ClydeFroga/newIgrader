@@ -10,6 +10,9 @@ $paddingLeft: 17%;
 	> div {
 		position: sticky;
 		top: 20px;
+		//max-height: calc( 100vh - 49px );
+		//overflow-y: auto;
+		//max-height: 100vh;
 		.userFields {
 			padding-left: $paddingLeft;
 			.search {
@@ -19,12 +22,22 @@ $paddingLeft: 17%;
 				display: none;
 			}
 		}
+		
 		> ul {
 			overflow-y: auto;
-			//max-height: 70vh;
+			max-height: 75vh;
 			padding: 0;
+			&::-webkit-scrollbar-thumb {
+				background-color: $dark;
+			}
+			&::-webkit-scrollbar {
+				width: 5px;
+				background-color: #F8F8F8;
+			}
+			scrollbar-width: thin;
 			list-style-type: none;
 			a {
+				cursor: pointer;
 				color: $dark;
 				font-size: 16px;
 				line-height: 150%;
@@ -58,9 +71,13 @@ $paddingLeft: 17%;
 					li {
 						padding: 1px 0;
 						border: none;
+						&:hover a {
+							color: $secondary;
+						}
 						a {
 							padding: 3px 0 3px  16px;
 							color: $dark;
+
 						}
 					}
 				}
@@ -78,7 +95,6 @@ $paddingLeft: 17%;
 	&__close {
 		display: none;
 	}
-	
 	.current-menu-item {
 		a {
 			position: relative;
@@ -202,6 +218,7 @@ $paddingLeft: 17%;
 		}
 	}
 }
+
 @media (max-width: 767px) {
 	.asideMenu {
 		margin-top: -7px;

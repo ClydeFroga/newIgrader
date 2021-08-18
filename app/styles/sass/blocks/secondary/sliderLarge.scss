@@ -93,7 +93,11 @@
 
 @media (max-width: 1600px) {
 	.sliderLarge {
+		#sliderLarge {
+			max-width: 640px;
+		}
 		&__block {
+			
 			max-height: unset;
 			flex-direction: column;
 			&Text {
@@ -119,13 +123,23 @@
 			top: 25%;
 			right: 0;
 		}
+
 	}
 }
 
 @media (max-width: 767px) {
 	.sliderLarge {
 		flex-direction: column;
-		
+		&.reverse {
+			>div:first-child {
+				order: 0;
+				margin-bottom: 50px;
+				margin-top: 0;
+			}
+			.foxy {
+				margin-top: 0;
+			}
+		}
 		>div:first-child {
 			order: 2;
 			margin-top: 50px;

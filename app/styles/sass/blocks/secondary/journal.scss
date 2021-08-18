@@ -36,6 +36,10 @@
 		border-top: 1px solid rgba(118, 139, 156, 0.5);
 		padding-top: 30px;
 	}
+	.subscribe {
+		font-size: 12px;
+		line-height: 150%;
+	}
 }
 
 @media (max-width: 1023px) {
@@ -70,6 +74,7 @@
 		row-gap: 20px;
 		align-items: center;
 		justify-content: center;
+		padding: 40px 10px;
 		&__img {
 			display: flex;
 			img {

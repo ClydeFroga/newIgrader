@@ -3,6 +3,7 @@
 	padding-top: 25px;
 	display: flex;
 	&__left {
+		//flex-basis: 34%;
 		margin-right: 25px;
 	}
 	.horizontalBar__blc {
@@ -19,7 +20,7 @@
 
 @media (max-width: 1023px) {
 	.forked {
-		border-bottom: 1px solid rgba(118, 139, 156, 0.5);
+		//border-bottom: 1px solid rgba(118, 139, 156, 0.5);
 		padding-bottom: 25px;
 
 		&__left {

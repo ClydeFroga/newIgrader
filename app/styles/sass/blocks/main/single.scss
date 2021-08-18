@@ -1,5 +1,10 @@
 .single {
 	display: flex;
+	.foxy {
+		a {
+			margin: 0 auto;
+		}
+	}
 	
 	&__main {
 		margin-right: 25px;
@@ -8,8 +13,6 @@
 		align-content: flex-start;
 		display: grid;
 		grid-template-columns: 1fr;
-		//grid-template-columns: minmax(400px, 630px) 1fr;
-		//gap: 20px 25px;
 		
 		&Wrapper {
 			display: grid;
@@ -18,12 +21,15 @@
 		}
 		
 		&Content {
+			max-width: 630px;
 			.dateAndViews {
 				justify-content: flex-start;
 				align-items: center;
-				//flex-wrap: wrap;
+				flex-wrap: wrap;
+				//row-gap: 10px;
 				margin-bottom: 40px;
 				a, span {
+					margin-top: 10px;
 					margin-right: 10px;
 				}
 				.category {
@@ -38,10 +44,36 @@
 				line-height: 41px;
 				color: $color1;
 			}
+			.sign {
+				font-size: 16px;
+				line-height: 150%;
+				color: rgba(118, 139, 156, 0.5);
+				margin-bottom: 20px;
+				display: block;
+			}
 			&Text {
 				h2 {
+					font-weight: 500;
 					font-size: 25px;
 					line-height: 32px;
+				}
+				h3 {
+					font-weight: 500;
+					font-size: 23px;
+					line-height: 30px;
+				}
+				h4 {
+					font-weight: 500;
+					font-size: 21px;
+					line-height: 27px;
+				}
+				h5 {
+					font-weight: 500;
+					font-size: 2px;
+					line-height: 26px;
+				}
+				strong {
+					font-weight: 700;
 				}
 				.forSpecial {
 					figure {
@@ -137,6 +169,7 @@
 					margin-right: 0;
 					margin-left: 0;
 					figcaption {
+						word-break: break-word;
 						font-size: 16px;
 						line-height: 150%;
 						color: rgba(118, 139, 156, 0.5);
@@ -235,6 +268,7 @@
 			}
 		}
 		&Sticky {
+			max-width: 300px;
 			&Ride {
 				position: sticky;
 				top: 25px;
@@ -247,6 +281,7 @@
 						display: flex;
 						justify-content: space-between;
 						span {
+							margin: auto 0;
 							font-size: 12px;
 							line-height: 150%;
 							color: #3B5266;
@@ -417,8 +452,8 @@
 @media (max-width: 1279px) {
 	.single {
 		&__secondary {
-			flex: 0 0 25%;
-			max-width: 25%;
+			flex: 0 0 27%;
+			max-width: 27%;
 			.foxy, .foxyA {
 				display: flex;
 			}
@@ -476,7 +511,13 @@
 		&__main {
 			margin-right: 0;
 			&Content {
+				h1 {
+					word-break: break-word;
+				}
 				&Text {
+					p {
+						word-break: break-word;
+					}
 					.forReadMore {
 						margin-top: -205px;
 						top: 235px;
