@@ -61,7 +61,7 @@
 
   .views {
     display: inline-flex;
-    div {
+    span {
       &:before {
         content: '';
         width: 12px;
@@ -130,6 +130,19 @@
       background-color: $accent;
       border: none;
     }
+    &.text {
+      padding: 0;
+      border: none;
+      font-size: 14px;
+      line-height: 148%;
+      display: flex;
+      align-items: center;
+      color: #768B9C;
+    }
+  }
+
+  .company {
+    color: #768B9C;
   }
   
   .date {
@@ -162,7 +175,6 @@
 
 .dateAndViews.start {
   justify-content: flex-start;
-
 }
 
 @media (max-width: 1023px) {

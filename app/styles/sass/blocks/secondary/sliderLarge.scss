@@ -46,6 +46,12 @@
 
 		}
 	}
+
+	&.disabled {
+		.sliderLarge__left, .sliderLarge__right {
+			display: none;
+		}
+	}
 	
 	&__left, &__right {
 		position: absolute;
@@ -123,7 +129,14 @@
 			top: 25%;
 			right: 0;
 		}
+	}
+}
 
+@media (max-width: 1023px) {
+	.sliderLarge {
+		#sliderLarge {
+			max-width: unset;
+		}
 	}
 }
 
@@ -144,9 +157,6 @@
 			order: 2;
 			margin-top: 50px;
 			margin-right: 0 !important;
-		}
-		&__block {
-		
 		}
 		&__left {
 			top: 20%;

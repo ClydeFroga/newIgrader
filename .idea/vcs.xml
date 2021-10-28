@@ -2,10 +2,10 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$/../dpromGulp" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../grader" vcs="Git" />
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../leskGulp" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../../../../../xampp/htdocs/dprom/wp-content/themes/dprom3" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../../../../../xampp/htdocs/lesk/wp-content/themes/forest" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/../../../../../xampp/htdocs/nuxt" vcs="Git" />
   </component>
 </project>

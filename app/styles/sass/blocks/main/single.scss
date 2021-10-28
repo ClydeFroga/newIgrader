@@ -13,6 +13,10 @@
 		align-content: flex-start;
 		display: grid;
 		grid-template-columns: 1fr;
+
+		> .foxyLong {
+			margin: 0 0 30px 0;
+		}
 		
 		&Wrapper {
 			display: grid;
@@ -50,6 +54,13 @@
 				color: rgba(118, 139, 156, 0.5);
 				margin-bottom: 20px;
 				display: block;
+				a {
+					font-size: inherit;
+					line-height: inherit;
+					color: inherit;
+					margin-bottom: inherit;
+					display: inherit;
+				}
 			}
 			&Text {
 				h2 {
@@ -173,6 +184,11 @@
 						font-size: 16px;
 						line-height: 150%;
 						color: rgba(118, 139, 156, 0.5);
+						a {
+							font-size: inherit;
+							line-height: inherit;
+							margin-bottom: inherit;
+						}
 					}
 				}
 				ol{
@@ -353,7 +369,7 @@
 	flex-direction: column;
 	&__mainWrapper {
 		display: grid;
-		grid-template-columns: auto auto;
+		grid-template-columns: auto minmax(250px, 300px);
 		border-bottom: 1px solid rgba(118, 139, 156, 0.5);
 		padding-bottom: 35px;
 		margin-bottom: 60px;
@@ -445,6 +461,37 @@
 				grid-column-end: 2;
 			}
 
+		}
+	}
+}
+
+@media (max-width: 1440px) {
+	.single {
+		&__main {
+			&Wrapper {
+				grid-template-columns: minmax(300px, 1fr) 200px;
+			}
+			&Sticky {
+				display: block;
+				&RideSharing {
+					> span {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 1150px) {
+	.single {
+		&__main {
+			&Wrapper {
+				grid-template-columns: minmax(300px, 1fr);
+			}
+			&Sticky {
+				display: none;
+			}
 		}
 	}
 }

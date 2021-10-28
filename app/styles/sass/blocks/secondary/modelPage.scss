@@ -1,0 +1,263 @@
+.modelPage {
+  &__main {
+    display: flex;
+    &Swiper {
+      flex: 0 0 48%;
+      min-width: 0;
+      >div {
+        position: relative;
+      }
+      >div:nth-child(1) {
+        .modelPage__mainSwiperHover {
+          top: 50%;
+          margin-top: calc(0px - 54px/ 2);
+          margin-left: calc(0px - 80px/ 2);
+          width: 80px;
+          height: 54px;
+          left: 50%;
+        }
+        &:hover {
+          .modelPage__mainSwiperHover {
+            display: flex;
+          }
+        }
+        .swiper-button-next, .swiper-button-prev {
+          background-color: #F89B00;
+          height: 54px;
+          &:after {
+            font-size: 11px;
+            color: #f8f8f8;
+          }
+        }
+        .swiper-button-prev {
+          left: 0;
+        }
+        .swiper-button-next {
+          right: 0;
+        }
+      }
+      >div:nth-child(2) {
+        .swiper-slide {
+          display: flex;
+        }
+        .swiper-slide:hover {
+          &:after {
+            content: '';
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 2;
+            display: block;
+            position: absolute;
+            top: 0;
+          }
+          &:before {
+            content: 'Увеличить';
+            color: #F8F8F8;
+            font-size: 12px;
+            background-image: url("svg/assets/zoomIn.svg");
+            background-size: 24px;
+            height: 50px;
+            width: 54px;
+            background-repeat: no-repeat;
+            z-index: 3;
+            position: absolute;
+            display: flex;
+            align-items: flex-end;
+            left: 50%;
+            top: 50%;
+            margin-top: -25px;
+            margin-left: -27px;
+            background-position-x: center;
+          }
+        }
+      }
+      &Hover {
+        display: none;
+        position: absolute;
+        background: rgba(0, 0, 0, 0.5);
+        color: #F8F8F8;
+        z-index: 3;
+        flex-direction: column;
+        align-items: center;
+        font-size: 12px;
+        line-height: 150%;
+        padding: 6px;
+      }
+    }
+    &Desc {
+      padding: 0 4%;
+      flex: 0 0 48%;
+      display: flex;
+      flex-direction: column;
+      margin-top: auto;
+      margin-bottom: auto;
+      h1 {
+        text-transform: none;
+      }
+      &List {
+        p {
+          display: flex;
+          span {
+            margin: 0;
+          }
+          span:nth-child(2) {
+            flex-grow: 1;
+            border-bottom: 1px dashed rgba(118, 139, 156, 0.5);
+            margin: 0 10px;
+          }
+        }
+        //justify-content: space-between;
+      }
+      &Buttons {
+        margin-top: 25px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        button {
+          margin: 0 !important;
+        }
+        span {
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          svg {
+            margin-right: 5px;
+          }
+        }
+      }
+      &Logo {
+        margin-top: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        > img {
+          flex: 0 0 45%;
+          padding: 30px;
+          border: 5px solid #F8F8F8;
+        }
+        > div {
+          svg {
+            margin-left: 10px;
+            max-width: 16px;
+            max-height: 11px;
+          }
+        }
+      }
+    }
+  }
+  &__second {
+    &.advert {
+      .single__mainContent {
+        max-width: unset;
+      }
+      .modelPage__secondModel-button {
+        max-width: 300px;
+        display: flex;
+        svg {
+          width: 22px;
+          height: 22px;
+          margin-right: 15px;
+        }
+      }
+    }
+    &Table {
+      margin-top: 25px;
+      display: flex;
+      justify-content: space-between;
+      table {
+        flex: 0 0 49%;
+        border-collapse: collapse;
+        tr {
+          background-color: #F2F2F2;
+          
+          &:not(:last-child) {
+            border-bottom: 5px solid white;
+          }
+          td {
+            padding: 10px 20px;
+          }
+          td:first-child {
+            font-weight: normal;
+            font-size: 16px;
+            color: #768B9C;
+          }
+          td:last-child {
+            font-weight: 600;
+            font-size: 16px;
+            color: #27343F;
+          }
+        }
+      }
+    }
+  }
+  hr {
+    color: #F2F2F2;
+  }
+  .single__mainStickyRide {
+    > a {
+      margin-bottom: 10px;
+    }
+  }
+  &__smallTitle {
+    margin-bottom: 20px;
+  }
+  > .lkCompany__superLarge {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .modelPage {
+    &__main {
+      flex-direction: column;
+      &Desc {
+        margin-top: 0px;
+        padding: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .modelPage {
+    &__main {
+      &Desc {
+        &Logo {
+          img {
+            flex: 0 0 25%;
+            padding: 30px 10px;
+          }
+        }
+        &Buttons {
+          &.collapse {
+            flex-direction: column;
+            button {
+              padding: 20px;
+              width: 100%;
+              margin-bottom: 10px !important;
+            }
+          }
+        }
+      }
+    }
+    &__second {
+      &Table {
+        flex-direction: column;
+        table {
+          margin-top: 5px;
+        }
+      }
+      &.advert {
+        .modelPage__secondModel-button {
+          max-width: unset;
+          width: 100%;
+          justify-content: center;
+          font-weight: 600;
+          font-size: 16px;
+          align-items: center;
+        }
+      }
+    }
+  }
+}

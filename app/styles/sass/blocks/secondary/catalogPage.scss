@@ -1,0 +1,37 @@
+.catalogPage {
+  .rubricTitle {
+    margin-bottom: 20px;
+    display: block;
+  }
+  .foxyLong {
+    margin-bottom: 20px;
+  }
+  .orange {
+    padding: 30px;
+    background-color: #FFEDCE;
+    .lkCompany__inThree {
+      //column-gap: 30px;
+    }
+  }
+}
+
+@media (max-width: 1023px) {
+  .catalogPage {
+    .rubricTitle {
+      margin-bottom: 0;
+    }
+    .orange {
+      padding: 15px;
+    }
+  }
+}
+
+@media (max-width: 1600px) {
+  .catalogPage {
+    .orange {
+      .lkCompany__inThree {
+        //grid-template-columns: 1fr 1fr !important;
+      }
+    }
+  }
+}

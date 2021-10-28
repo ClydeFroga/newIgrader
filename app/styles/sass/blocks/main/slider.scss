@@ -21,6 +21,7 @@
 			}
 		}
 		&Control {
+			margin-right: 5px;
 			margin-left: auto;
 			display: flex;
 		}
@@ -28,8 +29,9 @@
 	&__pagination {
 		display: flex;
 		align-items: center;
-		margin: 4px 13px 0 13px;
+		margin: 0 13px 0 13px;
 		.swiper-pagination-bullet {
+			border-radius: 50%;
 			background-color: $dark;
 			width: 5px;
 			height: 5px;
@@ -99,6 +101,7 @@
 				opacity: 0.3;
 				position: absolute;
 				top: 23%;
+				border-radius: 10px;
 			}
 		}
 	}

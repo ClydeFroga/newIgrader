@@ -15,10 +15,18 @@
 .stickyFox {
   position: sticky;
   top: 25px;
+  z-index: 2;
 }
 
 .foxyA a {
   background-position-y: top !important;
+}
+
+.foxyLong {
+  max-width: 100%;
+  div {
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 1279px) {

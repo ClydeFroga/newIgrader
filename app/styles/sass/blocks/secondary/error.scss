@@ -1,0 +1,17 @@
+.error {
+  border: 8px solid #F2F2F2;
+  padding: 14px 18px;
+  margin-bottom: 25px;
+  p {
+    margin: 0;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 20px;
+    color: #27343F;
+    span {
+      all: inherit;
+      display: inline;
+      color: #F89B00;
+    }
+  }
+}

@@ -10,7 +10,7 @@
 	overflow: hidden;
 	margin: auto;
 	background-color: rgba(39, 52, 63, 0.9);
-	.contactForm, .sendpulse {
+	.container {
 		position: relative;
 		padding: 50px 50px;
 		margin: 10% auto;
@@ -29,11 +29,15 @@
 			height: 100%;
 		}
 	}
+	.lkCompany {
+		max-width: 465px;
+		background-color: #f8f8f8;
+	}
 }
 
 @media (max-width: 576px) {
 	.modalSubscription {
-		.contactForm, .sendpulse {
+		.container {
 			display: flex;
 			padding: 25px 25px;
 			width: 90%;

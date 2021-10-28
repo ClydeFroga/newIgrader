@@ -9,6 +9,7 @@
     <orderEntry type="module" module-name="forest" />
     <orderEntry type="module" module-name="first" />
     <orderEntry type="module" module-name="igraderNew" />
-    <orderEntry type="module" module-name="nuxt" />
+    <orderEntry type="module" module-name="grader" />
+    <orderEntry type="module" module-name="vue" />
   </component>
 </module>
