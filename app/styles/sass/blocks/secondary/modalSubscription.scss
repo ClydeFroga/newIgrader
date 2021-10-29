@@ -12,8 +12,8 @@
 	background-color: rgba(39, 52, 63, 0.9);
 	.container {
 		position: relative;
-		padding: 50px 50px;
-		margin: 10% auto;
+		padding: 2vh 4vw;
+		margin: 10vh auto;
 		width: 65%;
 	}
 	&__close {
@@ -31,16 +31,62 @@
 	}
 	.lkCompany {
 		max-width: 465px;
-		background-color: #f8f8f8;
+		background-color: #F2F2F2;
+		position: relative;
+		form {
+			max-height: 80vh;
+			overflow-y: auto;
+		}
+		&.small {
+			background-image: linear-gradient(#EDEEEF, #EDEEEF), url('svg/assets/clock.svg');
+			background-blend-mode: color-burn;
+			background-size: 50%;
+			background-position-x: -30%;
+			background-position-y: center;
+			background-repeat: no-repeat;
+			flex-direction: column;
+			align-items: center;
+			display: flex;
+			gap: 30px;
+			padding: 60px 0;
+			p {
+				text-align: center;
+			}
+		}
 	}
 }
+
+@media (max-height: 1023px) {
+	.modalSubscription {
+		.lkCompany {
+			form {
+				max-height: 65vh;
+			}
+		}
+	}
+}
+
+
 
 @media (max-width: 576px) {
 	.modalSubscription {
 		.container {
 			display: flex;
-			padding: 25px 25px;
+			// padding: 25px 25px;
 			width: 90%;
+		}
+		.lkCompany {
+			display: block;
+
+			.lkCompany__filterBottomItemLine {
+				width: 100%;
+				> div {
+					flex-direction: column;
+				}
+				button {
+					width: 100%;
+				}
+			}
 		}
 	}
 }

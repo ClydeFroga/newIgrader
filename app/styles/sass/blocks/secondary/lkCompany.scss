@@ -500,20 +500,32 @@ $colorSimple: #768B9C;
     }
   }
   &__form {
-    //display: grid;
     gap: 25px;
-    //grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    //align-items: center;
-
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    input {
+    input[type=text],input[type=email],input[type=password],input[type=tel],textarea {
       max-width: 100%;
+      width: 100%;
       background-color: #F8F8F8;
       border: none;
       padding: 10px 20px;
       margin-top: 7px;
+    }
+    .password {
+      position: relative;
+      &:after {
+        content: '';
+        background-image: url('svg/assets/viewsDark.svg');
+        position: absolute;
+        bottom: 17px;
+        right: 5px;
+        width: 16px;
+        height: 11px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
     }
     > div {
       flex-basis: 15%;
@@ -521,16 +533,10 @@ $colorSimple: #768B9C;
       flex-direction: column;
       min-width: 220px;
 
-      &:nth-child(6) {
+      &.large {
         flex-grow: 1;
       }
-
-      &:nth-child(7) {
-        flex-grow: 1;
-
-      }
-
-      &:nth-child(8) {
+      &.last {
         flex-grow: 2;
         button {
           width: 235px;
@@ -540,7 +546,6 @@ $colorSimple: #768B9C;
         }
       }
     }
-
   }
   #form__close {
     margin-bottom: 0;
@@ -842,6 +847,13 @@ $colorSimple: #768B9C;
             padding: 10px 20px;
             color: rgba(118, 139, 156, 0.5);
             height: 50px;
+            position: relative;
+            &:after {
+              content: url("svg/assets/dropdown.svg");
+              position: absolute;
+              right: 10px;
+              top: 12px;
+            }
           }
           ul {
             z-index: 2;
@@ -1001,6 +1013,34 @@ $colorSimple: #768B9C;
         line-height: 28px;
         color: rgba(118, 139, 156, 0.5);
       }
+    }
+  }
+  &__modal {
+    margin-top: 20px;
+    .lkCompany__filterBottomItem {
+      margin-right: 0;
+      > span {
+        margin: 0 !important;
+      }
+    }
+    .lkCompany__filterBottomItemLine {
+      flex-basis: unset;
+      > div {
+        align-items: center;
+        gap: 10px;
+      }
+    }
+    .styled + label:before {
+      width: 16px !important;
+      height: 16px !important;
+      min-height: 16px !important;
+      min-width: 16px !important;
+      border-width: 1px !important;
+    }
+    > p a {
+      color: inherit;
+      font-size: inherit;
+      text-decoration: underline;
     }
   }
 }
@@ -1245,6 +1285,9 @@ $colorSimple: #768B9C;
           &Dropdown {
             span {
               height: unset;
+              &:after {
+                top: unset;
+              }
             }
           }
         }
@@ -1271,13 +1314,7 @@ $colorSimple: #768B9C;
         }
       }
     }
-    &__modal {
-      label {
-        input {
-          
-        }
-      }
-    }
+
     &__inThree {
       grid-template-columns: 1fr !important;
     }

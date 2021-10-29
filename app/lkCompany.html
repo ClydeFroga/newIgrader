@@ -115,7 +115,7 @@
                                         <span>
                                             0 шт.
                                         </span>
-                                        <button class="lkCompany__button">Добавить опцию</button>
+                                        <button id="addName" class="lkCompany__button">Добавить опцию</button>
                                     </div>
                                 </div>
                                 <div class="lkCompany__optionsBox">
@@ -127,7 +127,7 @@
                                         <span>
                                             0 шт.
                                         </span>
-                                        <button class="lkCompany__button">Добавить опцию</button>
+                                        <button id="addCompany" class="lkCompany__button">Добавить опцию</button>
                                     </div>
                                 </div>
                                 <div class="lkCompany__optionsBox">
@@ -139,7 +139,7 @@
                                         <span>
                                             0 шт.
                                         </span>
-                                        <button class="lkCompany__button">Добавить опцию</button>
+                                        <button id="complete" class="lkCompany__button">Добавить опцию</button>
                                     </div>
                                 </div>
                             </div>
@@ -379,17 +379,17 @@
                                 <label for="office" class="lkCompany__topGray">Офис</label>
                                 <input id="office" name="office" type="text" placeholder="5">
                             </div>
-                            <div>
+                            <div class="large">
                                 <label for="email" class="lkCompany__topGray">E-mail</label>
                                 <input id="email" name="office" type="email" placeholder="username@mail.ru">
                             </div>
-                            <div>
+                            <div class="large">
                                 <label for="phone" class="lkCompany__topGray">Номер телефона</label>
                                 <input id="phone" name="phone" type="text" placeholder="+7 931 219 01 19">
                             </div>
-                            <div>
+                            <div class="last">
                                 <button class="lkCompany__button" type="submit">Сохранить</button>
-                            </div>
+                            </div >
                         </form>
                     </div>
 
@@ -1154,6 +1154,8 @@
 <!--#include virtual="/parts/modalSubscriptionContactForm.html" -->
 <!--#include virtual="/parts/modalSubscriptionSendPulse.html" -->
 <!--#include virtual="/parts/modalAddName.html" -->
+<!--#include virtual="/parts/modalAddCompany.html" -->
+<!--#include virtual="/parts/modalModeration.html" -->
 
 <!--#include virtual="/parts/footer.html" -->
 

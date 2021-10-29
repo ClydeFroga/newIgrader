@@ -1,15 +1,48 @@
 <div id="modalAddName" class="modalSubscription">
 	<section class="container lkCompany">
-		<form class="lkCompany__modal lkCompany__filter">
-			<p>Добавить наименование в каталог</p>
-			<label>
-				<span>
+		<p class="lkCompany__topLarge">Добавить наименование в каталог</p>
+		<form class="lkCompany__modal lkCompany__form lkCompany__filter">
+			<label class="lkCompany__filterBottomItem">
+				<span class="lkCompany__topGray">
 					Наименование модели
 				</span>
-				<input placeholder="ST562-8990C">
+				<input type="text" placeholder="ST562-8990C">
 			</label>
-
-
+			<div class="lkCompany__filterBottomItem">
+				<span class="lkCompany__topGray"> Бренд </span>
+				<input hidden type="text"></input>
+				<div class="lkCompany__filterBottomItemDropdown">
+					<span>Четра</span>
+					<ul>
+						<li>Дорожно-строительная техника</li>
+						<li>Дорожно-строительная техника</li>
+						<li>Дорожно-строительная техника</li>
+						<li>Дорожно-строительная техника</li>
+					</ul>
+				</div>
+			</div>
+			<div class="lkCompany__filterBottomItem">
+				<span class="lkCompany__topGray"> Тип техники </span>
+				<input hidden type="text"></input>
+				<div class="lkCompany__filterBottomItemDropdown">
+					<span>Бульдозер</span>
+					<ul>
+						<li>Дорожно-строительная техника</li>
+						<li>Дорожно-строительная техника</li>
+						<li>Дорожно-строительная техника</li>
+						<li>Дорожно-строительная техника</li>
+					</ul>
+				</div>
+			</div>
+			<label class="lkCompany__filterBottomItem">
+				<span class="lkCompany__topGray">
+					Описание
+				</span>
+				<textarea maxlength="1500" placeholder="Не более 1500 символов"></textarea>
+			</label>
+			<button type="submit" class="lkCompany__button dark">
+				Добавить
+		</button>
 		</form>
 		<div id="closeModal" class="modalSubscription__close">
 				<svg>
